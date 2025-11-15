@@ -24,7 +24,7 @@ git push -u origin main
 
 ### Step 3: Your Live Portfolio
 
-Your portfolio will be available at: **https://epetaway.github.io/epetaway**
+Your portfolio will be available at: **https://epetaway.github.io/BroadCastMed**
 
 The GitHub Actions workflow will:
 - ✅ Use Node.js 20 (compatible with Next.js 16)

@@ -40,8 +40,8 @@ A comprehensive showcase of healthcare CMS development and enterprise email camp
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/epetaway/epetaway.git
-cd epetaway
+git clone https://github.com/Epetaway/BroadCastMed.git
+cd BroadCastMed
 ```
 
 2. Install dependencies:
@@ -66,7 +66,7 @@ This generates a static export in the `out` directory, ready for deployment to G
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages via GitHub Actions when changes are pushed to the main branch. The deployed site is available at: `https://epetaway.github.io/epetaway`
+The site automatically deploys to GitHub Pages via GitHub Actions when changes are pushed to the main branch. The deployed site is available at: `https://epetaway.github.io/BroadCastMed`
 
 ## Contact
 
@@ -74,4 +74,4 @@ Earl Hickson - [earl.hickson@email.com](mailto:earl.hickson@email.com)
 
 LinkedIn: [https://linkedin.com/in/earlhickson](https://linkedin.com/in/earlhickson)
 
-Portfolio: [https://epetaway.github.io/epetaway](https://epetaway.github.io/epetaway)
+Portfolio: [https://epetaway.github.io/BroadCastMed](https://epetaway.github.io/BroadCastMed)
