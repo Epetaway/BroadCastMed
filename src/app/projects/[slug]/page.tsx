@@ -2,10 +2,17 @@
 
 import { useState } from 'react';
 import { notFound } from 'next/navigation';
-import { getProjectBySlug } from '@/data/projects';
+import { getProjectBySlug, projects } from '@/data/projects';
 import { useViewMode } from '@/context/ViewModeContext';
 import { ArrowLeft, ExternalLink, Github, Monitor, Tablet, Smartphone, Code, ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
+
+// Generate static params for all projects
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
 
 interface ProjectPageProps {
   params: { slug: string };
