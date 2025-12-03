@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Code, Heart, Users, CheckCircle2, Mail, Layout } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Mail, Layout, Users } from 'lucide-react';
 import { ProjectCard } from '@/components/projects/ProjectCard';
 import { getFeaturedProjects } from '@/data/projects';
 import { motion } from 'framer-motion';
@@ -216,7 +216,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div className="grid gap-6" variants={staggerContainer}>
-            {featuredProjects.map((project, index) => (
+            {featuredProjects.map((project) => (
               <motion.div key={project.slug} variants={fadeInUp}>
                 <ProjectCard project={project} />
               </motion.div>
