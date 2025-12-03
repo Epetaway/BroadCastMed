@@ -178,6 +178,86 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Live Templates Showcase */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          className="max-w-6xl mx-auto"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.div className="text-center mb-12" variants={fadeInUp}>
+            <h2 className="text-4xl font-bold mb-4">Live CMS Templates</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore fully functional healthcare CMS templates with realistic oncology content
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <motion.div
+              className="group bg-card border border-border rounded-xl p-8 hover:shadow-xl transition-all hover:border-healthcare-primary/50"
+              variants={fadeInUp}
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-healthcare-primary to-healthcare-primary/70 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Layout className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Article Template</h3>
+              <p className="text-muted-foreground mb-6">
+                Clinical updates with authors, references, and structured sections
+              </p>
+              <Link
+                href="/templates/article"
+                className="inline-flex items-center text-healthcare-primary font-semibold group-hover:underline"
+              >
+                View Template
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              className="group bg-card border border-border rounded-xl p-8 hover:shadow-xl transition-all hover:border-healthcare-secondary/50"
+              variants={fadeInUp}
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-healthcare-secondary to-healthcare-secondary/70 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Resource Template</h3>
+              <p className="text-muted-foreground mb-6">
+                Patient education guides with downloadable materials
+              </p>
+              <Link
+                href="/templates/resource"
+                className="inline-flex items-center text-healthcare-secondary font-semibold group-hover:underline"
+              >
+                View Template
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              className="group bg-card border border-border rounded-xl p-8 hover:shadow-xl transition-all hover:border-healthcare-accent/50"
+              variants={fadeInUp}
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-healthcare-accent to-healthcare-accent/70 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Email Campaigns</h3>
+              <p className="text-muted-foreground mb-6">
+                Responsive HTML emails with cross-client compatibility
+              </p>
+              <Link
+                href="/case-studies/broadcastmed"
+                className="inline-flex items-center text-healthcare-accent font-semibold group-hover:underline"
+              >
+                View Case Study
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Featured Projects */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

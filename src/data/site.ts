@@ -10,6 +10,9 @@ export const contactInfo: ContactInfo = {
 export const navigation: NavigationItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
+  { label: 'Templates', href: '/templates/article' },
+  { label: 'Case Study', href: '/case-studies/broadcastmed' },
+  { label: 'Dev View', href: '/dev-view' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
