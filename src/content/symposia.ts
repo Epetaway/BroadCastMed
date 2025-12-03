@@ -106,6 +106,10 @@ export const symposiaData: SymposiumDetail[] = [
   },
 ];
 
+export function getAllSymposia(): SymposiumDetail[] {
+  return symposiaData;
+}
+
 export function getSymposiumBySlug(slug: string): SymposiumDetail | undefined {
   return symposiaData.find((sym) => sym.slug === slug);
 }

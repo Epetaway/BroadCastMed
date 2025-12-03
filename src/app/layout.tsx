@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import { ViewModeProvider } from '@/context/ViewModeContext';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
+import { SiteHeader } from '@/components/layout/SiteHeader';
+import { SiteFooter } from '@/components/layout/SiteFooter';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -10,19 +9,17 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Earl Hickson - Front-End Developer',
+  title: 'Dana-Farber Provider Education Platform',
   description:
-    'Front-End Developer specializing in healthcare CMS platforms, responsive email campaigns, and accessible user interfaces.',
+    'Clinical education hub for oncology providers featuring symposia, research updates, and CME-accredited content.',
   keywords: [
-    'front-end developer',
-    'healthcare',
-    'CMS',
-    'email development',
-    'accessibility',
-    'React',
-    'TypeScript',
+    'oncology education',
+    'CME',
+    'Dana-Farber',
+    'provider resources',
+    'cancer research',
+    'medical education',
   ],
-  authors: [{ name: 'Earl Hickson' }],
 };
 
 export default function RootLayout({
@@ -33,15 +30,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans antialiased">
-        <ViewModeProvider>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main id="main-content" className="flex-1" role="main">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </ViewModeProvider>
+        <div className="min-h-screen flex flex-col">
+          <SiteHeader />
+          <main id="main-content" className="flex-1" role="main">
+            {children}
+          </main>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );
