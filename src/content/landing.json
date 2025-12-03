@@ -1,0 +1,173 @@
+{
+  "id": "landing-001",
+  "type": "landing",
+  "title": "BroadcastMed Clinical Oncology Network",
+  "subtitle": "Evidence-Based Education for Healthcare Professionals",
+  "hero": {
+    "title": "Advancing Oncology Care Through Education",
+    "subtitle": "Access the latest clinical updates, treatment guidelines, and continuing medical education from leading oncology experts",
+    "primaryCTA": {
+      "text": "Explore Clinical Content",
+      "link": "/templates/article"
+    },
+    "secondaryCTA": {
+      "text": "View CME Opportunities",
+      "link": "/resources/cme"
+    },
+    "backgroundImage": "/assets/medical-images/oncology-hero.svg"
+  },
+  "featuredSections": [
+    {
+      "id": "featured-content",
+      "title": "Featured Clinical Updates",
+      "type": "content-grid",
+      "items": [
+        {
+          "title": "Advances in Targeted Therapy for NSCLC",
+          "category": "Thoracic Oncology",
+          "readTime": "8 min",
+          "thumbnail": "/assets/medical-images/lung-cancer.svg",
+          "link": "/templates/article",
+          "badge": "New"
+        },
+        {
+          "title": "Immunotherapy Management Guidelines",
+          "category": "Medical Oncology",
+          "readTime": "12 min",
+          "thumbnail": "/assets/medical-images/immunotherapy.svg",
+          "link": "/templates/resource"
+        },
+        {
+          "title": "Breast Cancer Screening Updates",
+          "category": "Breast Oncology",
+          "readTime": "6 min",
+          "thumbnail": "/assets/medical-images/breast-cancer.svg",
+          "link": "/content/articles"
+        }
+      ]
+    },
+    {
+      "id": "cme-opportunities",
+      "title": "Continuing Medical Education",
+      "type": "cme-grid",
+      "description": "Earn CME credits through our accredited educational activities",
+      "items": [
+        {
+          "title": "Precision Medicine in Oncology",
+          "credits": "2.0 AMA PRA Category 1 Credits™",
+          "expiration": "December 31, 2024",
+          "format": "Online Activity",
+          "thumbnail": "/assets/medical-images/precision-medicine.svg"
+        },
+        {
+          "title": "Emerging Therapies in Hematologic Malignancies",
+          "credits": "1.5 AMA PRA Category 1 Credits™",
+          "expiration": "November 30, 2024",
+          "format": "Video Series",
+          "thumbnail": "/assets/medical-images/hematology.svg"
+        }
+      ]
+    },
+    {
+      "id": "specialties",
+      "title": "Explore by Specialty",
+      "type": "specialty-nav",
+      "items": [
+        {
+          "name": "Breast Oncology",
+          "icon": "breast",
+          "count": 47,
+          "link": "/specialty/breast"
+        },
+        {
+          "name": "Thoracic Oncology",
+          "icon": "lung",
+          "count": 38,
+          "link": "/specialty/thoracic"
+        },
+        {
+          "name": "GI Oncology",
+          "icon": "gi",
+          "count": 42,
+          "link": "/specialty/gi"
+        },
+        {
+          "name": "Hematology",
+          "icon": "blood",
+          "count": 55,
+          "link": "/specialty/hematology"
+        },
+        {
+          "name": "Genitourinary",
+          "icon": "gu",
+          "count": 31,
+          "link": "/specialty/gu"
+        },
+        {
+          "name": "Gynecologic Oncology",
+          "icon": "gyn",
+          "count": 28,
+          "link": "/specialty/gyn"
+        }
+      ]
+    },
+    {
+      "id": "physician-tools",
+      "title": "Clinical Resources & Tools",
+      "type": "tools-grid",
+      "items": [
+        {
+          "title": "Treatment Guidelines",
+          "description": "Evidence-based guidelines for oncology treatment",
+          "icon": "guidelines",
+          "link": "/resources/guidelines"
+        },
+        {
+          "title": "Drug Information",
+          "description": "Comprehensive oncology drug database",
+          "icon": "drug",
+          "link": "/resources/drugs"
+        },
+        {
+          "title": "Clinical Calculators",
+          "description": "Dosing and risk assessment tools",
+          "icon": "calculator",
+          "link": "/resources/calculators"
+        },
+        {
+          "title": "Patient Education",
+          "description": "Materials for patient counseling",
+          "icon": "education",
+          "link": "/resources/patient-education"
+        }
+      ]
+    }
+  ],
+  "newsletterSignup": {
+    "title": "Stay Updated",
+    "description": "Receive weekly clinical updates and CME opportunities delivered to your inbox",
+    "placeholder": "Enter your email address",
+    "buttonText": "Subscribe",
+    "disclaimer": "We respect your privacy. Unsubscribe at any time."
+  },
+  "footerCTAs": [
+    {
+      "title": "For Physicians",
+      "description": "Access clinical content, CME, and professional resources",
+      "link": "/physicians",
+      "icon": "stethoscope"
+    },
+    {
+      "title": "For Patients",
+      "description": "Find educational materials and support resources",
+      "link": "/patients",
+      "icon": "heart"
+    },
+    {
+      "title": "For Researchers",
+      "description": "Explore clinical trials and research opportunities",
+      "link": "/research",
+      "icon": "microscope"
+    }
+  ]
+}
