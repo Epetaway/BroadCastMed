@@ -53,10 +53,7 @@ export default function Home() {
               <span className="text-healthcare-primary font-semibold">
                 clinical content management
               </span>
-              ,{' '}
-              <span className="text-healthcare-secondary font-semibold">
-                physician workflows
-              </span>
+              , <span className="text-healthcare-secondary font-semibold">physician workflows</span>
               , and{' '}
               <span className="text-healthcare-accent font-semibold">
                 cross-client email compatibility
@@ -89,24 +86,15 @@ export default function Home() {
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8"
             variants={staggerContainer}
           >
-            <motion.div
-              className="p-6 bg-card border border-border rounded-xl"
-              variants={fadeInUp}
-            >
+            <motion.div className="p-6 bg-card border border-border rounded-xl" variants={fadeInUp}>
               <div className="text-3xl font-bold text-healthcare-primary mb-2">50+</div>
               <div className="text-sm text-muted-foreground">Email Campaigns Deployed</div>
             </motion.div>
-            <motion.div
-              className="p-6 bg-card border border-border rounded-xl"
-              variants={fadeInUp}
-            >
+            <motion.div className="p-6 bg-card border border-border rounded-xl" variants={fadeInUp}>
               <div className="text-3xl font-bold text-healthcare-secondary mb-2">WCAG 2.1 AA</div>
               <div className="text-sm text-muted-foreground">Accessibility Compliance</div>
             </motion.div>
-            <motion.div
-              className="p-6 bg-card border border-border rounded-xl"
-              variants={fadeInUp}
-            >
+            <motion.div className="p-6 bg-card border border-border rounded-xl" variants={fadeInUp}>
               <div className="text-3xl font-bold text-healthcare-accent mb-2">98%</div>
               <div className="text-sm text-muted-foreground">Cross-Client Compatibility</div>
             </motion.div>
