@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
 import { contactInfo } from '@/data/site';
@@ -9,7 +9,7 @@ export default function ContactPage() {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -23,7 +23,7 @@ export default function ContactPage() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
@@ -33,8 +33,8 @@ export default function ContactPage() {
         <div className="text-center space-y-6 mb-12">
           <h1 className="text-4xl font-bold tracking-tight">Get In Touch</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Interested in collaborating on a healthcare technology project? 
-            I&apos;d love to discuss how we can work together.
+            Interested in collaborating on a healthcare technology project? I&apos;d love to discuss
+            how we can work together.
           </p>
         </div>
 
@@ -44,9 +44,9 @@ export default function ContactPage() {
             <div className="space-y-6">
               <h2 className="text-2xl font-bold">Let&apos;s Connect</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Whether you&apos;re looking for a front-end developer with healthcare 
-                experience, want to discuss a CMS project, or need help with 
-                responsive email campaigns, I&apos;m here to help.
+                Whether you&apos;re looking for a front-end developer with healthcare experience,
+                want to discuss a CMS project, or need help with responsive email campaigns,
+                I&apos;m here to help.
               </p>
             </div>
 
@@ -110,8 +110,8 @@ export default function ContactPage() {
             <div className="bg-muted/30 rounded-lg p-6 space-y-4">
               <h3 className="text-lg font-semibold">Current Availability</h3>
               <p className="text-muted-foreground">
-                I&apos;m currently available for new projects and consulting opportunities. 
-                I typically respond to inquiries within 24 hours.
+                I&apos;m currently available for new projects and consulting opportunities. I
+                typically respond to inquiries within 24 hours.
               </p>
               <div className="space-y-2 text-sm">
                 <p className="text-muted-foreground">• Healthcare CMS development</p>
@@ -125,7 +125,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="space-y-6">
             <h2 className="text-2xl font-bold">Send a Message</h2>
-            
+
             {isSubmitted ? (
               <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center space-y-4">
                 <CheckCircle className="w-12 h-12 text-green-600 mx-auto" />
@@ -152,7 +152,7 @@ export default function ContactPage() {
                       placeholder="Your full name"
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
                       Email *
@@ -169,7 +169,7 @@ export default function ContactPage() {
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <label htmlFor="subject" className="text-sm font-medium">
                     Subject *
@@ -185,7 +185,7 @@ export default function ContactPage() {
                     placeholder="Project discussion, collaboration opportunity, etc."
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">
                     Message *
@@ -201,7 +201,7 @@ export default function ContactPage() {
                     placeholder="Tell me about your project, timeline, and any specific requirements..."
                   />
                 </div>
-                
+
                 <button
                   type="submit"
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-healthcare-primary text-white rounded-lg hover:bg-healthcare-primary/90 transition-colors"
@@ -209,10 +209,10 @@ export default function ContactPage() {
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </button>
-                
+
                 <p className="text-xs text-muted-foreground text-center">
-                  By sending this message, you agree to receive a response via email. 
-                  Your information will not be shared with third parties.
+                  By sending this message, you agree to receive a response via email. Your
+                  information will not be shared with third parties.
                 </p>
               </form>
             )}

@@ -9,14 +9,15 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Earl Hickson</h3>
             <p className="text-muted-foreground mb-4">
-              Front-End Developer specializing in healthcare CMS platforms, responsive email campaigns, and accessible user interfaces.
+              Front-End Developer specializing in healthcare CMS platforms, responsive email
+              campaigns, and accessible user interfaces.
             </p>
             <div className="flex items-center text-muted-foreground">
               <MapPin className="w-4 h-4 mr-2" />
               {contactInfo.location}
             </div>
           </div>
-          
+
           <div>
             <h4 className="font-medium mb-4">Specialties</h4>
             <ul className="text-sm text-muted-foreground space-y-2">
@@ -26,7 +27,7 @@ export function Footer() {
               <li>Clinical Workflow Design</li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-medium mb-4">Connect</h4>
             <div className="flex space-x-4">
@@ -58,7 +59,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t mt-8 pt-6 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Earl Hickson. All rights reserved.</p>
         </div>

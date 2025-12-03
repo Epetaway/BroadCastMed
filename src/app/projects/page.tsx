@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { projects } from "@/data/projects";
-import { ProjectCard } from "@/components/projects/ProjectCard";
-import { useViewMode } from "@/context/ViewModeContext";
+import { projects } from '@/data/projects';
+import { ProjectCard } from '@/components/projects/ProjectCard';
+import { useViewMode } from '@/context/ViewModeContext';
 
 export default function ProjectsPage() {
   const { viewMode } = useViewMode();
@@ -13,8 +13,8 @@ export default function ProjectsPage() {
         <div className="text-center space-y-4 mb-12">
           <h1 className="text-4xl font-bold tracking-tight">My Work</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of healthcare-focused front-end development projects, 
-            featuring CMS platforms, responsive email campaigns, and accessible user interfaces.
+            A showcase of healthcare-focused front-end development projects, featuring CMS
+            platforms, responsive email campaigns, and accessible user interfaces.
           </p>
           <div className="flex items-center justify-center">
             <div className="px-3 py-1 bg-muted rounded-full text-sm">
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
             </div>
           </div>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />

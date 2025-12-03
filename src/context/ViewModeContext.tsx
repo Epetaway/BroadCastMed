@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { createContext, useContext, useState } from 'react';
 import { ViewMode } from '@/types';
@@ -14,7 +14,7 @@ export function ViewModeProvider({ children }: { children: React.ReactNode }) {
   const [viewMode, setViewMode] = useState<ViewMode['mode']>('portfolio');
 
   const toggleViewMode = () => {
-    setViewMode(prev => prev === 'developer' ? 'portfolio' : 'developer');
+    setViewMode((prev) => (prev === 'developer' ? 'portfolio' : 'developer'));
   };
 
   return (

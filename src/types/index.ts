@@ -11,16 +11,16 @@ export interface Project {
   category: string;
   tech: string[];
   featured?: boolean;
-  
+
   developerView: ProjectView;
   portfolioView: ProjectView;
-  
+
   links: {
     demo?: string;
     repo?: string;
     caseStudy?: string;
   };
-  
+
   images?: {
     hero: string;
     gallery?: string[];
@@ -30,7 +30,7 @@ export interface Project {
       description: string;
     }[];
   };
-  
+
   technicalDetails?: {
     challenges: string[];
     solutions: string[];
@@ -41,7 +41,7 @@ export interface Project {
       language: string;
     }[];
   };
-  
+
   outcomes?: {
     metrics?: string[];
     feedback?: string[];

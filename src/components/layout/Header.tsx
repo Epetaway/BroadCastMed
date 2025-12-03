@@ -12,7 +12,7 @@ export function Header() {
               <span className="font-bold text-xl text-healthcare-primary">Earl Hickson</span>
             </Link>
           </div>
-          
+
           <nav className="hidden md:flex items-center space-x-6">
             {navigation.map((item) => (
               <Link
@@ -27,7 +27,7 @@ export function Header() {
             ))}
             <ViewModeToggle />
           </nav>
-          
+
           {/* Mobile menu button would go here */}
           <div className="md:hidden">
             <ViewModeToggle />

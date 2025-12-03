@@ -2,101 +2,105 @@ import { Project } from '@/types';
 
 export const projects: Project[] = [
   {
-    slug: "clinical-content-platform",
-    title: "Clinical Content Platform & Email Campaign System",
-    role: "Front-End Developer",
-    category: "Healthcare",
+    slug: 'clinical-content-platform',
+    title: 'Clinical Content Platform & Email Campaign System',
+    role: 'Front-End Developer',
+    category: 'Healthcare',
     featured: true,
     tech: [
-      "HTML5",
-      "CSS3 / SCSS",
-      "JavaScript ES6+",
-      "Bootstrap 5",
-      "CMS Templates",
-      "Responsive Email Development",
-      "Cross-Browser Support",
-      "Accessibility"
+      'HTML5',
+      'CSS3 / SCSS',
+      'JavaScript ES6+',
+      'Bootstrap 5',
+      'CMS Templates',
+      'Responsive Email Development',
+      'Cross-Browser Support',
+      'Accessibility',
     ],
 
     developerView: {
-      headline: "CMS-driven oncology platform with reusable UI templates and enterprise HTML email development",
+      headline:
+        'CMS-driven oncology platform with reusable UI templates and enterprise HTML email development',
       summary:
-        "Worked on a clinical content platform delivering treatment updates, CME opportunities, and oncology research to physicians. Built front-end templates, responsive layouts, and modular email campaigns using HTML, CSS, JavaScript, and Bootstrap. Improved user flows, content structures, and mobile usability based on stakeholder feedback from clinical and marketing teams.",
+        'Worked on a clinical content platform delivering treatment updates, CME opportunities, and oncology research to physicians. Built front-end templates, responsive layouts, and modular email campaigns using HTML, CSS, JavaScript, and Bootstrap. Improved user flows, content structures, and mobile usability based on stakeholder feedback from clinical and marketing teams.',
       bullets: [
-        "Developed CMS-driven pages for treatment guidelines, oncology updates, physician signup flows, and unsubscribe confirmation journeys.",
-        "Built modular HTML email templates for cancer research newsletters, CME course promotions, and clinical communication campaigns.",
-        "Ensured cross-client compatibility (Outlook, Gmail, Apple Mail) with table-based responsive email layouts and carefully scoped CSS.",
-        "Created reusable components for hero banners, content summaries, CTA rows, image + text blocks, and multi-article sections.",
-        "Optimized physician content pages for readability, hierarchy, spacing, and accessibility, following healthcare content standards.",
-        "Implemented stakeholder feedback (e.g., rotating content carousels, updated referral forms, improved headers, and user flow copy).",
-        "Enhanced mobile responsiveness across all pages using Bootstrap grid, custom SCSS, and media-query refinements.",
+        'Developed CMS-driven pages for treatment guidelines, oncology updates, physician signup flows, and unsubscribe confirmation journeys.',
+        'Built modular HTML email templates for cancer research newsletters, CME course promotions, and clinical communication campaigns.',
+        'Ensured cross-client compatibility (Outlook, Gmail, Apple Mail) with table-based responsive email layouts and carefully scoped CSS.',
+        'Created reusable components for hero banners, content summaries, CTA rows, image + text blocks, and multi-article sections.',
+        'Optimized physician content pages for readability, hierarchy, spacing, and accessibility, following healthcare content standards.',
+        'Implemented stakeholder feedback (e.g., rotating content carousels, updated referral forms, improved headers, and user flow copy).',
+        'Enhanced mobile responsiveness across all pages using Bootstrap grid, custom SCSS, and media-query refinements.',
         "Improved clinical signup and 'refer-a-patient' workflows with clearer fields, dropdowns, and call-center guidance.",
-        "Added UTM tracking and analytics hooks to CTAs for engagement measurement on oncology and CME content.",
-        "Collaborated across clinical, marketing, and technical teams to ship fast, accurate, and compliant oncology content UIs."
-      ]
+        'Added UTM tracking and analytics hooks to CTAs for engagement measurement on oncology and CME content.',
+        'Collaborated across clinical, marketing, and technical teams to ship fast, accurate, and compliant oncology content UIs.',
+      ],
     },
 
     portfolioView: {
-      headline: "Helping physicians access critical oncology information quickly and easily",
+      headline: 'Helping physicians access critical oncology information quickly and easily',
       summary:
-        "This project brings together a physician resource website and coordinated HTML email campaigns to share important cancer treatment updates. I focused on building clean, mobile-friendly templates that help busy clinicians read, sign up, and take action without friction.",
+        'This project brings together a physician resource website and coordinated HTML email campaigns to share important cancer treatment updates. I focused on building clean, mobile-friendly templates that help busy clinicians read, sign up, and take action without friction.',
       bullets: [
-        "Designed clean, readable layouts so clinicians can skim treatment updates and guidelines easily.",
-        "Built user-friendly signup and unsubscribe experiences that respect physician inboxes and preferences.",
-        "Created modular email templates for spreading research news, CME invitations, and clinical announcements.",
-        "Improved referral workflows with clearer fields and direct call-center contact guidance.",
-        "Ensured every page and email works seamlessly on desktop, tablet, and mobile.",
-        "Collaborated closely with medical content teams to keep the experience accurate and helpful."
-      ]
+        'Designed clean, readable layouts so clinicians can skim treatment updates and guidelines easily.',
+        'Built user-friendly signup and unsubscribe experiences that respect physician inboxes and preferences.',
+        'Created modular email templates for spreading research news, CME invitations, and clinical announcements.',
+        'Improved referral workflows with clearer fields and direct call-center contact guidance.',
+        'Ensured every page and email works seamlessly on desktop, tablet, and mobile.',
+        'Collaborated closely with medical content teams to keep the experience accurate and helpful.',
+      ],
     },
 
     links: {
-      demo: "",
-      repo: "",
-      caseStudy: "/projects/clinical-content-platform"
+      demo: '',
+      repo: '',
+      caseStudy: '/projects/clinical-content-platform',
     },
 
     images: {
-      hero: "/images/projects/clinical-platform/hero.jpg",
+      hero: '/images/projects/clinical-platform/hero.jpg',
       gallery: [
-        "/images/projects/clinical-platform/cms-templates.jpg",
-        "/images/projects/clinical-platform/email-campaigns.jpg",
-        "/images/projects/clinical-platform/mobile-responsive.jpg",
-        "/images/projects/clinical-platform/accessibility.jpg"
+        '/images/projects/clinical-platform/cms-templates.jpg',
+        '/images/projects/clinical-platform/email-campaigns.jpg',
+        '/images/projects/clinical-platform/mobile-responsive.jpg',
+        '/images/projects/clinical-platform/accessibility.jpg',
       ],
       beforeAfter: [
         {
-          before: "/images/projects/clinical-platform/referral-before.jpg",
-          after: "/images/projects/clinical-platform/referral-after.jpg",
-          description: "Improved 'refer-a-patient' form with clearer fields, specialty dropdowns, and call-center guidance"
+          before: '/images/projects/clinical-platform/referral-before.jpg',
+          after: '/images/projects/clinical-platform/referral-after.jpg',
+          description:
+            "Improved 'refer-a-patient' form with clearer fields, specialty dropdowns, and call-center guidance",
         },
         {
-          before: "/images/projects/clinical-platform/carousel-before.jpg",
-          after: "/images/projects/clinical-platform/carousel-after.jpg",
-          description: "Added rotating content carousels for new oncology updates and treatment guidelines"
-        }
-      ]
+          before: '/images/projects/clinical-platform/carousel-before.jpg',
+          after: '/images/projects/clinical-platform/carousel-after.jpg',
+          description:
+            'Added rotating content carousels for new oncology updates and treatment guidelines',
+        },
+      ],
     },
 
     technicalDetails: {
       challenges: [
-        "Cross-client email compatibility across Outlook, Gmail, and mobile clients",
-        "CMS template flexibility while maintaining design consistency",
-        "Healthcare content accessibility and readability standards",
-        "Mobile responsiveness for physician workflow requirements",
-        "Stakeholder feedback integration across multiple teams"
+        'Cross-client email compatibility across Outlook, Gmail, and mobile clients',
+        'CMS template flexibility while maintaining design consistency',
+        'Healthcare content accessibility and readability standards',
+        'Mobile responsiveness for physician workflow requirements',
+        'Stakeholder feedback integration across multiple teams',
       ],
       solutions: [
-        "Table-based email layouts with progressive enhancement and MSO conditionals",
-        "Modular component architecture with configurable content blocks",
-        "WCAG 2.1 AA compliance with semantic HTML and proper heading hierarchy",
-        "Bootstrap grid system with custom breakpoints for medical device usage",
-        "Structured feedback review process with UX documentation and implementation tracking"
+        'Table-based email layouts with progressive enhancement and MSO conditionals',
+        'Modular component architecture with configurable content blocks',
+        'WCAG 2.1 AA compliance with semantic HTML and proper heading hierarchy',
+        'Bootstrap grid system with custom breakpoints for medical device usage',
+        'Structured feedback review process with UX documentation and implementation tracking',
       ],
       codeSnippets: [
         {
-          title: "Responsive Email Table Structure",
-          description: "Cross-client compatible email layout using table-based structure with media queries",
+          title: 'Responsive Email Table Structure',
+          description:
+            'Cross-client compatible email layout using table-based structure with media queries',
           code: `<!-- Responsive email container with Outlook fallbacks -->
 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
   <tr>
@@ -131,11 +135,11 @@ export const projects: Project[] = [
     .mobile-padding { padding: 10px !important; }
   }
 </style>`,
-          language: "html"
+          language: 'html',
         },
         {
-          title: "CMS Component Structure",
-          description: "Modular component pattern for CMS-driven content blocks",
+          title: 'CMS Component Structure',
+          description: 'Modular component pattern for CMS-driven content blocks',
           code: `// Reusable content block component for CMS templates
 interface ContentBlockProps {
   type: 'hero' | 'text' | 'image-text' | 'cta' | 'carousel';
@@ -210,38 +214,38 @@ const ContentBlock: React.FC<ContentBlockProps> = ({
 };
 
 export default ContentBlock;`,
-          language: "tsx"
-        }
-      ]
+          language: 'tsx',
+        },
+      ],
     },
 
     outcomes: {
       metrics: [
-        "Improved email open rates through responsive design optimization",
-        "Reduced content publishing time with modular CMS templates",
-        "Enhanced mobile usability across all physician-facing pages",
-        "Streamlined referral workflows with clearer form interactions"
+        'Improved email open rates through responsive design optimization',
+        'Reduced content publishing time with modular CMS templates',
+        'Enhanced mobile usability across all physician-facing pages',
+        'Streamlined referral workflows with clearer form interactions',
       ],
       feedback: [
-        "Clinical stakeholders praised improved content hierarchy and readability",
-        "Marketing team noted faster campaign deployment with modular email templates",
-        "Physicians appreciated mobile-friendly layouts for on-the-go access",
-        "Content editors found CMS templates intuitive and flexible"
+        'Clinical stakeholders praised improved content hierarchy and readability',
+        'Marketing team noted faster campaign deployment with modular email templates',
+        'Physicians appreciated mobile-friendly layouts for on-the-go access',
+        'Content editors found CMS templates intuitive and flexible',
       ],
       improvements: [
-        "Implemented rotating carousels for featured oncology content",
+        'Implemented rotating carousels for featured oncology content',
         "Enhanced 'refer-a-patient' forms with specialty-specific fields",
-        "Added accessibility features for diverse clinical audiences",
-        "Created consistent brand experience across web and email platforms"
-      ]
-    }
-  }
+        'Added accessibility features for diverse clinical audiences',
+        'Created consistent brand experience across web and email platforms',
+      ],
+    },
+  },
 ];
 
 export const getFeaturedProjects = (): Project[] => {
-  return projects.filter(project => project.featured);
+  return projects.filter((project) => project.featured);
 };
 
 export const getProjectBySlug = (slug: string): Project | undefined => {
-  return projects.find(project => project.slug === slug);
+  return projects.find((project) => project.slug === slug);
 };

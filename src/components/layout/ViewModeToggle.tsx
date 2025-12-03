@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useViewMode } from '@/context/ViewModeContext';
 import { Monitor, User } from 'lucide-react';

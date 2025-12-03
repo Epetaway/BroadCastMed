@@ -1,8 +1,18 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
 import { useViewMode } from '@/context/ViewModeContext';
-import { ArrowLeft, ExternalLink, Github, Monitor, Tablet, Smartphone, Code, ChevronDown, ChevronUp } from 'lucide-react';
+import {
+  ArrowLeft,
+  ExternalLink,
+  Github,
+  Monitor,
+  Tablet,
+  Smartphone,
+  Code,
+  ChevronDown,
+  ChevronUp,
+} from 'lucide-react';
 import Link from 'next/link';
 import { Project } from '@/types';
 
@@ -45,7 +55,7 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <span className="text-muted-foreground">•</span>
               <span className="text-muted-foreground">{project.role}</span>
             </div>
-            
+
             <h1 className="text-4xl font-bold tracking-tight">{project.title}</h1>
             <h2 className="text-xl text-healthcare-primary font-medium">{currentView.headline}</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">{currentView.summary}</p>
@@ -53,7 +63,9 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
 
           {/* Technology Stack */}
           <div className="space-y-3">
-            <h3 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground">Technologies Used</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground">
+              Technologies Used
+            </h3>
             <div className="flex flex-wrap gap-2">
               {project.tech.map((tech) => (
                 <span
@@ -101,7 +113,9 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <button
                 onClick={() => setActiveDevice('desktop')}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-colors ${
-                  activeDevice === 'desktop' ? 'bg-healthcare-primary text-white' : 'bg-muted hover:bg-muted/80'
+                  activeDevice === 'desktop'
+                    ? 'bg-healthcare-primary text-white'
+                    : 'bg-muted hover:bg-muted/80'
                 }`}
               >
                 <Monitor className="w-4 h-4" />
@@ -110,7 +124,9 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <button
                 onClick={() => setActiveDevice('tablet')}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-colors ${
-                  activeDevice === 'tablet' ? 'bg-healthcare-primary text-white' : 'bg-muted hover:bg-muted/80'
+                  activeDevice === 'tablet'
+                    ? 'bg-healthcare-primary text-white'
+                    : 'bg-muted hover:bg-muted/80'
                 }`}
               >
                 <Tablet className="w-4 h-4" />
@@ -119,7 +135,9 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <button
                 onClick={() => setActiveDevice('mobile')}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-colors ${
-                  activeDevice === 'mobile' ? 'bg-healthcare-primary text-white' : 'bg-muted hover:bg-muted/80'
+                  activeDevice === 'mobile'
+                    ? 'bg-healthcare-primary text-white'
+                    : 'bg-muted hover:bg-muted/80'
                 }`}
               >
                 <Smartphone className="w-4 h-4" />
@@ -129,11 +147,15 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
             <div className="bg-white rounded-lg p-4 border">
               <div className="text-center text-muted-foreground">
                 <p className="mb-2">Preview for {activeDevice} view</p>
-                <div className={`mx-auto bg-healthcare-primary/10 rounded ${
-                  activeDevice === 'desktop' ? 'w-full h-64' : 
-                  activeDevice === 'tablet' ? 'w-3/4 h-56' : 
-                  'w-1/2 h-48'
-                }`}>
+                <div
+                  className={`mx-auto bg-healthcare-primary/10 rounded ${
+                    activeDevice === 'desktop'
+                      ? 'w-full h-64'
+                      : activeDevice === 'tablet'
+                        ? 'w-3/4 h-56'
+                        : 'w-1/2 h-48'
+                  }`}
+                >
                   <div className="flex items-center justify-center h-full">
                     <span className="text-healthcare-primary font-medium">
                       {activeDevice.charAt(0).toUpperCase() + activeDevice.slice(1)} Layout
@@ -162,7 +184,7 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
         {viewMode === 'developer' && project.technicalDetails && (
           <div className="space-y-8 mb-12">
             <h2 className="text-2xl font-bold">Technical Implementation</h2>
-            
+
             {/* Challenges & Solutions */}
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
@@ -210,13 +232,11 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
                         <ChevronDown className="w-4 h-4" />
                       )}
                     </button>
-                    
+
                     {expandedSnippet === index && (
                       <div className="p-4 bg-white border-t">
                         <pre className="text-sm overflow-x-auto">
-                          <code className={`language-${snippet.language}`}>
-                            {snippet.code}
-                          </code>
+                          <code className={`language-${snippet.language}`}>{snippet.code}</code>
                         </pre>
                       </div>
                     )}
@@ -272,7 +292,7 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
                   </ul>
                 </div>
               )}
-              
+
               {project.outcomes.feedback && (
                 <div className="space-y-3">
                   <h3 className="text-lg font-semibold">Stakeholder Feedback</h3>
