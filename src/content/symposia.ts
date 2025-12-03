@@ -3,6 +3,7 @@
  */
 
 import type { SymposiumDetail } from '@/types/content';
+import { getSymposiumImage, generateSeed } from '@/lib/images';
 
 export const symposiaData: SymposiumDetail[] = [
   {
@@ -14,7 +15,7 @@ export const symposiaData: SymposiumDetail[] = [
       'Explore critical early warning signs of colorectal cancer in younger patients, with a focus on symptom recognition and timely referral strategies.',
     specialty: 'Colorectal',
     date: '2025-01-15',
-    image: '/images/medical-placeholder-hero.jpg',
+    image: getSymposiumImage(generateSeed('early-symptoms-crc')),
     tags: ['Early Detection', 'Young-Onset CRC', 'Symptom Recognition'],
     seriesName: 'Gut Instincts Series',
     cmeCredits: '1.0 AMA PRA Category 1 Credit',
@@ -71,7 +72,7 @@ export const symposiaData: SymposiumDetail[] = [
       'A comprehensive preview of key abstracts and research presentations from the upcoming ASCO annual meeting.',
     specialty: 'General',
     date: '2025-05-01',
-    image: '/images/medical-placeholder-hero.jpg',
+    image: getSymposiumImage(generateSeed('asco-preview-2025')),
     tags: ['ASCO', 'Clinical Trials', 'Research Updates'],
     seriesName: 'ASCO Preview',
     cmeCredits: '1.5 AMA PRA Category 1 Credits',

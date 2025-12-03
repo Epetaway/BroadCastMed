@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Clock } from 'lucide-react';
 import { BaseResource } from '@/types/content';
+import { getCardImage, generateSeed } from '@/lib/images';
 
 interface ResourceCardProps {
   resource: BaseResource;
@@ -11,14 +12,15 @@ interface ResourceCardProps {
 }
 
 export function ResourceCard({ resource, href }: ResourceCardProps) {
+  // Generate fallback image if none provided, using resource slug for consistency
+  const imageSrc = resource.image || getCardImage(generateSeed(resource.slug));
+
   return (
     <Link href={href}>
       <Card className="h-full transition-shadow hover:shadow-md">
-        {resource.image && (
-          <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
-            <Image src={resource.image} alt={resource.title} fill className="object-cover" />
-          </div>
-        )}
+        <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+          <Image src={imageSrc} alt={resource.title} fill className="object-cover" />
+        </div>
 
         <CardHeader>
           <div className="mb-2 flex flex-wrap gap-2">
