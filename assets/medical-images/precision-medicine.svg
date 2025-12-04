@@ -1,0 +1,13 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  <g transform="translate(200,130)">
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#0075e6" stroke-width="2"/>
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#00b3b3" stroke-width="2"/>
+    <circle cx="0" cy="0" r="20" fill="#0075e6" opacity="0.5"/>
+    <line x1="0" y1="-50" x2="0" y2="-60" stroke="#0075e6" stroke-width="2"/>
+    <line x1="0" y1="50" x2="0" y2="60" stroke="#0075e6" stroke-width="2"/>
+    <line x1="-50" y1="0" x2="-60" y2="0" stroke="#0075e6" stroke-width="2"/>
+    <line x1="50" y1="0" x2="60" y2="0" stroke="#0075e6" stroke-width="2"/>
+  </g>
+  <text x="200" y="260" font-family="Arial" font-size="16" fill="#495057" text-anchor="middle">Precision Medicine</text>
+</svg>

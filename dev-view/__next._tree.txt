@@ -1,0 +1,2 @@
+:HL["/BroadCastMed/_next/static/chunks/78bc0ea83412f57c.css","style"]
+0:{"buildId":"XPVPHMvXvgptCcTWO6t_i","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"dev-view","paramType":null,"paramKey":"dev-view","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
