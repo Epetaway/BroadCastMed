@@ -1,9 +1,16 @@
-import { ReactNode } from 'react';
+import { ResourceCard } from './ResourceCard';
+import { BaseResource } from '@/types/content';
 
 interface ResourceGridProps {
-  children: ReactNode;
+  resources: BaseResource[];
 }
 
-export function ResourceGrid({ children }: ResourceGridProps) {
-  return <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{children}</div>;
+export function ResourceGrid({ resources }: ResourceGridProps) {
+  return (
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {resources.map((resource) => (
+        <ResourceCard key={resource.slug} resource={resource} />
+      ))}
+    </div>
+  );
 }

@@ -107,21 +107,7 @@ export default function ClinicalGuidancePage({ params }: { params: { slug: strin
           {related.length > 0 && (
             <section className="mt-16">
               <SectionHeader title="Related Content" />
-              <ResourceGrid>
-                {related.map((item) => (
-                  <ResourceCard
-                    key={item.id}
-                    resource={item}
-                    href={
-                      item.type === 'Research' || item.type === 'News'
-                        ? `/research/${item.slug}`
-                        : item.type === 'Clinical Guidance'
-                          ? `/clinical-guidance/${item.slug}`
-                          : `/symposia/${item.slug}`
-                    }
-                  />
-                ))}
-              </ResourceGrid>
+              <ResourceGrid resources={related} />
             </section>
           )}
         </div>

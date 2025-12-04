@@ -22,11 +22,7 @@ export default function ResearchPage() {
           subtitle="Evidence-based insights from Dana-Farber researchers and latest oncology breakthroughs"
         />
 
-        <ResourceGrid>
-          {research.map((article) => (
-            <ResourceCard key={article.id} resource={article} href={`/research/${article.slug}`} />
-          ))}
-        </ResourceGrid>
+        <ResourceGrid resources={research} />
       </main>
     </Shell>
   );

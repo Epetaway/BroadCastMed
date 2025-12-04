@@ -39,15 +39,7 @@ export default function HomePage() {
         />
 
         <div className="mt-8">
-          <ResourceGrid>
-            {featuredSymposia.map((symposium) => (
-              <ResourceCard
-                key={symposium.slug}
-                resource={symposium}
-                href={`/symposia/${symposium.slug}`}
-              />
-            ))}
-          </ResourceGrid>
+          <ResourceGrid resources={featuredSymposia} />
         </div>
       </Shell>
 
