@@ -33,11 +33,10 @@ export default function SymposiaPage() {
         <div className="relative">
           <Shell>
             <div className="py-16">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Educational Symposia
-              </h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Educational Symposia</h1>
               <p className="text-xl text-white/90 max-w-2xl">
-                Access on-demand symposia featuring the latest advances in oncology care and treatment.
+                Access on-demand symposia featuring the latest advances in oncology care and
+                treatment.
               </p>
             </div>
           </Shell>

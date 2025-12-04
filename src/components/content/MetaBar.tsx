@@ -1,6 +1,6 @@
-import { Badge } from "@/components/ui/Badge";
-import { Clock, User, Calendar, Award } from "lucide-react";
-import { ResourceType, Specialty } from "@/types/content";
+import { Badge } from '@/components/ui/Badge';
+import { Clock, User, Calendar, Award } from 'lucide-react';
+import { ResourceType, Specialty } from '@/types/content';
 
 interface MetaBarProps {
   type?: ResourceType | string;
@@ -34,7 +34,7 @@ export function MetaBar({
         <div className="flex items-center gap-2 text-sm text-gray-600">
           <User className="h-4 w-4" />
           <span>
-            {presenters.length} Presenter{presenters.length > 1 ? "s" : ""}
+            {presenters.length} Presenter{presenters.length > 1 ? 's' : ''}
           </span>
         </div>
       )}

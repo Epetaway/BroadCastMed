@@ -72,12 +72,8 @@ export default function SymposiumPage({ params }: SymposiumPageProps) {
                   </span>
                 </div>
               )}
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                {symposium.title}
-              </h1>
-              <p className="text-xl text-white/90 max-w-3xl mb-8">
-                {symposium.summary}
-              </p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">{symposium.title}</h1>
+              <p className="text-xl text-white/90 max-w-3xl mb-8">{symposium.summary}</p>
               <Button variant="secondary">
                 <Play className="w-4 h-4 mr-2" />
                 Watch Symposium

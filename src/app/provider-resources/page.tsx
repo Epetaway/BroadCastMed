@@ -31,12 +31,10 @@ export default function ProviderResourcesPage() {
         <div className="relative">
           <Shell>
             <div className="py-16 md:py-24">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Education On-Demand
-              </h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Education On-Demand</h1>
               <p className="text-xl text-white/90 max-w-2xl">
-                Access the latest oncology education, research updates, and clinical guidance
-                from Dana-Farber Cancer Institute.
+                Access the latest oncology education, research updates, and clinical guidance from
+                Dana-Farber Cancer Institute.
               </p>
             </div>
           </Shell>
@@ -81,9 +79,7 @@ export default function ProviderResourcesPage() {
                     <UserPlus className="w-5 h-5 text-df-blue flex-shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-medium text-sm mb-1">Refer a Patient</h4>
-                      <p className="text-xs text-muted-foreground">
-                        Submit a patient referral
-                      </p>
+                      <p className="text-xs text-muted-foreground">Submit a patient referral</p>
                     </div>
                   </a>
 
@@ -94,9 +90,7 @@ export default function ProviderResourcesPage() {
                     <Search className="w-5 h-5 text-df-blue flex-shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-medium text-sm mb-1">Find a Clinical Trial</h4>
-                      <p className="text-xs text-muted-foreground">
-                        Search available trials
-                      </p>
+                      <p className="text-xs text-muted-foreground">Search available trials</p>
                     </div>
                   </a>
 
@@ -120,9 +114,7 @@ export default function ProviderResourcesPage() {
                     <Phone className="w-5 h-5 text-df-blue flex-shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-medium text-sm mb-1">Contact Us</h4>
-                      <p className="text-xs text-muted-foreground">
-                        Reach our provider line
-                      </p>
+                      <p className="text-xs text-muted-foreground">Reach our provider line</p>
                     </div>
                   </a>
                 </div>
@@ -132,9 +124,7 @@ export default function ProviderResourcesPage() {
                   <p className="text-xs text-muted-foreground mb-3">
                     Our provider services team is available to assist you.
                   </p>
-                  <p className="text-sm font-medium text-df-blue">
-                    1-877-442-3324
-                  </p>
+                  <p className="text-sm font-medium text-df-blue">1-877-442-3324</p>
                 </div>
               </div>
             </div>
