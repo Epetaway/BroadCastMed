@@ -2,9 +2,22 @@
  * Content Model - TypeScript interfaces for Dana-Farber CMS
  */
 
-export type Specialty = 'Colorectal' | 'Breast' | 'GU' | 'Gyn' | 'Hematologic' | 'General';
+export enum Specialty {
+  Colorectal = 'Colorectal',
+  Breast = 'Breast',
+  GU = 'Genitourinary',
+  Gyn = 'Gynecologic',
+  Hematologic = 'Hematologic',
+  General = 'General Oncology',
+}
 
-export type ResourceType = 'Symposium' | 'News' | 'Video' | 'Clinical Guidance';
+export enum ResourceType {
+  Symposium = 'Symposium',
+  News = 'News',
+  Video = 'Video',
+  ClinicalGuidance = 'Clinical Guidance',
+  Research = 'Research',
+}
 
 export interface BaseResource {
   id: string;
@@ -16,38 +29,36 @@ export interface BaseResource {
   date: string; // ISO date string
   image: string; // relative path to placeholder image
   tags?: string[];
+  relatedContent?: string[]; // slugs of related content
 }
 
 export interface ContentSection {
   heading?: string;
-  body: string;
-  bullets?: string[];
+  content?: string[];
+  subsections?: ContentSection[];
 }
 
 export interface SymposiumDetail extends BaseResource {
   seriesName?: string; // e.g., "Gut Instincts", "ASCO Preview"
   cmeCredits?: string;
   durationMinutes?: number;
-  presenters: string[];
-  learningObjectives: string[];
-  sections: ContentSection[];
-  relatedIds?: string[];
+  presenters?: string[];
+  learningObjectives?: string[];
+  articleBody: ContentSection[];
 }
 
 export interface ResearchDetail extends BaseResource {
   studyType?: string;
   source?: string;
-  keyFindings: string[];
-  sections: ContentSection[];
-  relatedIds?: string[];
+  learningObjectives?: string[];
+  articleBody: ContentSection[];
 }
 
 export interface ClinicalGuidanceDetail extends BaseResource {
-  audience: string;
-  whenToUse: string[];
-  keySteps: string[];
-  sections: ContentSection[];
-  relatedIds?: string[];
+  intendedAudience?: string[];
+  whenToUse?: string[];
+  keySteps?: string[];
+  articleBody: ContentSection[];
 }
 
 export interface ProviderResourcesContent {

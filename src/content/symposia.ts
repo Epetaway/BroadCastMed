@@ -2,122 +2,95 @@
  * Symposia Content - Dana-Farber Provider Education CMS
  */
 
-import type { SymposiumDetail } from '@/types/content';
-import { getSymposiumImage, generateSeed } from '@/lib/images';
+import { SymposiumDetail, Specialty, ResourceType } from "@/types/content";
+import { getSymposiumImage } from "@/lib/images";
 
-export const symposiaData: SymposiumDetail[] = [
+export const symposia: SymposiumDetail[] = [
   {
-    id: 'sym-001',
-    slug: 'early-symptoms-crc',
-    type: 'Symposium',
-    title: 'Understanding Early Symptom Presentation in CRC',
+    id: "early-symptoms-crc",
+    slug: "early-symptoms-crc",
+    seriesName: "Gut Instincts Series",
+    type: ResourceType.Symposium,
+    title: "Early Symptom Presentation in Colorectal Cancer",
     summary:
-      'Explore critical early warning signs of colorectal cancer in younger patients, with a focus on symptom recognition and timely referral strategies.',
-    specialty: 'Colorectal',
-    date: '2025-01-15',
-    image: getSymposiumImage(generateSeed('early-symptoms-crc')),
-    tags: ['Early Detection', 'Young-Onset CRC', 'Symptom Recognition'],
-    seriesName: 'Gut Instincts Series',
-    cmeCredits: '1.0 AMA PRA Category 1 Credit',
+      "Understanding subtle GI symptoms and supportive care strategies for patients with colorectal cancer.",
+    specialty: Specialty.Colorectal,
+    date: "2025-01-15",
+    image: getSymposiumImage("early-symptoms-crc"),
+    cmeCredits: "1.0",
     durationMinutes: 60,
-    presenters: [
-      'Dr. Sarah Chen, MD - Medical Oncology',
-      'Dr. Michael Torres, MD - Gastroenterology',
-    ],
+    presenters: ["Dr. Sarah Johnson, MD", "Dr. Michael Chen, MD"],
     learningObjectives: [
-      'Identify key early symptoms of colorectal cancer in patients under 50',
-      'Understand risk stratification for young-onset CRC',
-      'Implement evidence-based referral pathways for suspicious symptoms',
-      'Discuss supportive care considerations for young CRC patients',
+      "Identify key GI symptoms that warrant colorectal cancer evaluation in patients under 50",
+      "Understand evidence-based supportive care strategies for CRC patients",
+      "Recognize appropriate timing for specialty referrals and colonoscopy",
     ],
-    sections: [
+    relatedContent: ["cancer-factfinder-toolkit", "early-onset-crc-recognition"],
+    articleBody: [
       {
-        heading: 'Overview',
-        body: 'Young-onset colorectal cancer (CRC) is rising at an alarming rate. This session provides practical guidance for recognizing early symptoms and implementing timely referrals.',
-      },
-      {
-        heading: 'Recognizing Early Symptoms',
-        body: 'Early detection is critical for improving outcomes in young-onset CRC. Key symptoms to monitor include:',
-        bullets: [
-          'Persistent rectal bleeding or blood in stool',
-          'Unexplained changes in bowel habits lasting >4 weeks',
-          'Abdominal pain or cramping not explained by other causes',
-          'Unintentional weight loss',
-          'Iron-deficiency anemia without clear source',
+        heading: "Overview",
+        content: [
+          "Colorectal cancer incidence in adults under age 50 has been rising steadily over the past two decades. Early recognition of subtle GI symptoms and comprehensive supportive care are critical to improving outcomes in this population.",
+          "This session provides practical guidance for primary care and oncology clinicians on symptom recognition, diagnostic evaluation, and evidence-based supportive care interventions.",
         ],
       },
       {
-        heading: 'Supportive Care Strategies',
-        body: 'Young patients with CRC face unique psychosocial and physical challenges. Supportive care should address fertility preservation, nutritional support, and mental health screening.',
-      },
-      {
-        heading: 'When to Refer',
-        body: 'Consider immediate referral for colonoscopy when:',
-        bullets: [
-          'Any rectal bleeding in patients <50 without hemorrhoid history',
-          'Persistent GI symptoms with family history of CRC',
-          'Iron-deficiency anemia without menstrual loss',
-          'Palpable abdominal mass',
+        heading: "Recognizing Early Symptoms",
+        content: [
+          "Rectal bleeding (bright red or maroon blood) persisting beyond 2 weeks",
+          "Persistent change in bowel habits (new-onset diarrhea, constipation, or alternating patterns)",
+          "Unexplained iron-deficiency anemia in the absence of other causes",
+          "Unintentional weight loss exceeding 5% of body weight over 3-6 months",
+          "Persistent abdominal pain or cramping not explained by other diagnoses",
         ],
       },
     ],
-    relatedIds: ['res-002', 'guid-001'],
   },
   {
-    id: 'sym-002',
-    slug: 'asco-preview-2025',
-    type: 'Symposium',
-    title: 'ASCO 2025 Preview: Emerging Oncology Research',
+    id: "asco-preview-2025",
+    slug: "asco-preview-2025",
+    seriesName: "ASCO Preview Series",
+    type: ResourceType.Symposium,
+    title: "Emerging Oncology Research from ASCO 2025",
     summary:
-      'A comprehensive preview of key abstracts and research presentations from the upcoming ASCO annual meeting.',
-    specialty: 'General',
-    date: '2025-05-01',
-    image: getSymposiumImage(generateSeed('asco-preview-2025')),
-    tags: ['ASCO', 'Clinical Trials', 'Research Updates'],
-    seriesName: 'ASCO Preview',
-    cmeCredits: '1.5 AMA PRA Category 1 Credits',
+      "Preview of key clinical trials and research presentations from the upcoming ASCO Annual Meeting across multiple oncology subspecialties.",
+    specialty: Specialty.General,
+    date: "2025-02-20",
+    image: getSymposiumImage("asco-preview-2025"),
+    cmeCredits: "1.5",
     durationMinutes: 90,
     presenters: [
-      'Dr. Jennifer Park, MD, PhD - Hematologic Malignancies',
-      'Dr. Robert Kim, MD - Solid Tumors',
+      "Dr. Emily Rodriguez, MD, PhD",
+      "Dr. James Patterson, MD",
+      "Dr. Lisa Wang, MD",
     ],
     learningObjectives: [
-      'Review breakthrough abstracts in immunotherapy and targeted therapy',
-      'Understand emerging biomarker strategies across tumor types',
-      'Identify practice-changing research from ASCO 2025',
-      'Discuss implications for clinical decision-making',
+      "Review anticipated practice-changing clinical trial results to be presented at ASCO 2025",
+      "Discuss emerging therapeutic approaches in immunotherapy, targeted therapy, and precision medicine",
     ],
-    sections: [
+    relatedContent: ["immunotherapy-combination-trials", "cancer-factfinder-toolkit"],
+    articleBody: [
       {
-        heading: 'Overview',
-        body: 'This session highlights the most impactful research to be presented at ASCO 2025, with expert commentary on clinical applications.',
-      },
-      {
-        heading: 'Key Research Areas',
-        body: 'Focus areas include novel immunotherapy combinations, precision oncology advances, and supportive care innovations.',
-        bullets: [
-          'CAR-T cell therapy updates in hematologic malignancies',
-          'Antibody-drug conjugates in solid tumors',
-          'Liquid biopsy for minimal residual disease monitoring',
-          'Patient-reported outcomes in cancer survivorship',
+        heading: "Overview",
+        content: [
+          "The American Society of Clinical Oncology (ASCO) Annual Meeting serves as the premier forum for presenting groundbreaking oncology research.",
         ],
       },
     ],
-    relatedIds: ['res-001'],
   },
 ];
 
-export function getAllSymposia(): SymposiumDetail[] {
-  return symposiaData;
-}
-
 export function getSymposiumBySlug(slug: string): SymposiumDetail | undefined {
-  return symposiaData.find((sym) => sym.slug === slug);
+  return symposia.find((symposium) => symposium.slug === slug);
 }
 
-export function getSymposiaBySpecialty(specialty?: string): SymposiumDetail[] {
-  if (!specialty || specialty === 'All') {
-    return symposiaData;
+export function getAllSymposia(): SymposiumDetail[] {
+  return symposia;
+}
+
+export function getSymposiaBySpecialty(specialty: Specialty): SymposiumDetail[] {
+  if (specialty === Specialty.General) {
+    return symposia;
   }
-  return symposiaData.filter((sym) => sym.specialty === specialty);
+  return symposia.filter((symposium) => symposium.specialty === specialty);
 }

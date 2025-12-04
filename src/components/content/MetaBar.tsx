@@ -1,19 +1,31 @@
-import { Badge } from '@/components/ui/Badge';
-import { Clock, User } from 'lucide-react';
+import { Badge } from "@/components/ui/Badge";
+import { Clock, User, Calendar, Award } from "lucide-react";
+import { ResourceType, Specialty } from "@/types/content";
 
 interface MetaBarProps {
+  type?: ResourceType | string;
   date?: string;
   presenters?: string[];
-  specialty?: string;
+  specialty?: Specialty | string;
   cmeCredits?: string;
+  durationMinutes?: number;
 }
 
-export function MetaBar({ date, presenters, specialty, cmeCredits }: MetaBarProps) {
+export function MetaBar({
+  type,
+  date,
+  presenters,
+  specialty,
+  cmeCredits,
+  durationMinutes,
+}: MetaBarProps) {
   return (
     <div className="flex flex-wrap items-center gap-4 border-b border-t border-gray-200 py-4">
+      {type && <Badge>{type}</Badge>}
+
       {date && (
         <div className="flex items-center gap-2 text-sm text-gray-600">
-          <Clock className="h-4 w-4" />
+          <Calendar className="h-4 w-4" />
           <span>{new Date(date).toLocaleDateString()}</span>
         </div>
       )}
@@ -22,14 +34,26 @@ export function MetaBar({ date, presenters, specialty, cmeCredits }: MetaBarProp
         <div className="flex items-center gap-2 text-sm text-gray-600">
           <User className="h-4 w-4" />
           <span>
-            {presenters.length} Presenter{presenters.length > 1 ? 's' : ''}
+            {presenters.length} Presenter{presenters.length > 1 ? "s" : ""}
           </span>
+        </div>
+      )}
+
+      {durationMinutes && (
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <Clock className="h-4 w-4" />
+          <span>{durationMinutes} min</span>
         </div>
       )}
 
       {specialty && <Badge variant="default">{specialty}</Badge>}
 
-      {cmeCredits && <Badge variant="secondary">{cmeCredits}</Badge>}
+      {cmeCredits && (
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <Award className="h-4 w-4" />
+          <span>{cmeCredits}</span>
+        </div>
+      )}
     </div>
   );
 }

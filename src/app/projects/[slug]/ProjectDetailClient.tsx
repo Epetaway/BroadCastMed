@@ -189,7 +189,7 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Challenges</h3>
                 <ul className="space-y-2">
-                  {project.technicalDetails.challenges.map((challenge, index) => (
+                  {project.technicalDetails?.challenges.map((challenge, index) => (
                     <li key={index} className="text-muted-foreground text-sm leading-relaxed">
                       • {challenge}
                     </li>
@@ -199,7 +199,7 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Solutions</h3>
                 <ul className="space-y-2">
-                  {project.technicalDetails.solutions.map((solution, index) => (
+                  {project.technicalDetails?.solutions.map((solution, index) => (
                     <li key={index} className="text-muted-foreground text-sm leading-relaxed">
                       • {solution}
                     </li>
@@ -209,10 +209,10 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
             </div>
 
             {/* Code Snippets */}
-            {project.technicalDetails.codeSnippets && (
+            {project.technicalDetails?.codeSnippets && (
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Code Examples</h3>
-                {project.technicalDetails.codeSnippets.map((snippet, index) => (
+                {project.technicalDetails?.codeSnippets?.map((snippet, index) => (
                   <div key={index} className="border rounded-lg overflow-hidden">
                     <button
                       onClick={() => toggleSnippet(index)}

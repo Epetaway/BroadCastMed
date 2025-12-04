@@ -5,7 +5,8 @@ import Link from 'next/link';
 interface HeroBannerProps {
   title: string;
   subtitle: string;
-  imageSrc: string;
+  imageSrc?: string;
+  image?: string; // Alias for imageSrc
   primaryCta?: {
     text: string;
     href: string;
@@ -20,14 +21,18 @@ export function HeroBanner({
   title,
   subtitle,
   imageSrc,
+  image,
   primaryCta,
   secondaryCta,
 }: HeroBannerProps) {
+  const imageUrl = imageSrc || image;
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-df-blue to-df-blue-dark">
-      <div className="absolute inset-0 opacity-10">
-        <Image src={imageSrc} alt="" fill className="object-cover" priority />
-      </div>
+      {imageUrl && (
+        <div className="absolute inset-0 opacity-10">
+          <Image src={imageUrl} alt="" fill className="object-cover" priority />
+        </div>
+      )}
 
       <div className="container relative mx-auto px-4 py-20 md:py-32">
         <div className="max-w-3xl">
