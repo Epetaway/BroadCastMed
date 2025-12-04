@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { useViewMode } from '@/context/ViewModeContext';
 import {
   ArrowLeft,
   ExternalLink,
@@ -21,11 +20,11 @@ interface ProjectDetailClientProps {
 }
 
 export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
-  const { viewMode } = useViewMode();
+  // Default to portfolio view for now (Dana-Farber transformation in progress)
   const [activeDevice, setActiveDevice] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
   const [expandedSnippet, setExpandedSnippet] = useState<number | null>(null);
 
-  const currentView = viewMode === 'developer' ? project.developerView : project.portfolioView;
+  const currentView = project.portfolioView;
 
   const toggleSnippet = (index: number) => {
     setExpandedSnippet(expandedSnippet === index ? null : index);
@@ -180,8 +179,8 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
           </div>
         </div>
 
-        {/* Technical Implementation (Developer View Only) */}
-        {viewMode === 'developer' && project.technicalDetails && (
+        {/* Technical Implementation - Always hidden during Dana-Farber transformation */}
+        {false && project.technicalDetails && (
           <div className="space-y-8 mb-12">
             <h2 className="text-2xl font-bold">Technical Implementation</h2>
 
