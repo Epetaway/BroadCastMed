@@ -1,18 +1,25 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { ViewModeProvider } from "@/context/ViewModeContext";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+import type { Metadata, Viewport } from 'next';
+import './globals.css';
+import { SiteHeader } from '@/components/layout/SiteHeader';
+import { SiteFooter } from '@/components/layout/SiteFooter';
 
-const inter = Inter({ subsets: ["latin"] });
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
-  title: "Earl Hickson - Front-End Developer",
-  description: "Front-End Developer specializing in healthcare CMS platforms, responsive email campaigns, and accessible user interfaces.",
-  keywords: ["front-end developer", "healthcare", "CMS", "email development", "accessibility", "React", "TypeScript"],
-  authors: [{ name: "Earl Hickson" }],
-  viewport: "width=device-width, initial-scale=1",
+  title: 'Dana-Farber Provider Education Platform',
+  description:
+    'Clinical education hub for oncology providers featuring symposia, research updates, and CME-accredited content.',
+  keywords: [
+    'oncology education',
+    'CME',
+    'Dana-Farber',
+    'provider resources',
+    'cancer research',
+    'medical education',
+  ],
 };
 
 export default function RootLayout({
@@ -22,16 +29,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
-        <ViewModeProvider>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </ViewModeProvider>
+      <body className="font-sans antialiased">
+        <div className="min-h-screen flex flex-col">
+          <SiteHeader />
+          <main id="main-content" className="flex-1" role="main">
+            {children}
+          </main>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );

@@ -1,0 +1,77 @@
+{
+  "id": "resource-001",
+  "type": "resource",
+  "title": "Immunotherapy Patient Education Guide",
+  "category": "Patient Education",
+  "specialty": "Medical Oncology",
+  "publishDate": "2024-10-01",
+  "lastUpdated": "2024-11-01",
+  "intendedAudience": ["Patients", "Caregivers", "Nurses"],
+  "readTime": "6 min",
+  "description": "A comprehensive guide for patients and caregivers about immunotherapy treatment for cancer, including what to expect, potential side effects, and when to contact healthcare providers.",
+  "keyTakeaways": [
+    "Immunotherapy works by helping your immune system recognize and attack cancer cells",
+    "Side effects differ from chemotherapy and may involve immune-related reactions",
+    "Regular monitoring is essential to catch and manage side effects early",
+    "Communication with your healthcare team is crucial throughout treatment"
+  ],
+  "sections": [
+    {
+      "heading": "What is Immunotherapy?",
+      "content": "Immunotherapy is a type of cancer treatment that helps your immune system fight cancer. Your immune system is made up of organs, special cells, and substances that protect your body from infections and diseases, including cancer. Immunotherapy medications work by helping your immune system recognize cancer cells and attack them more effectively.",
+      "icon": "info"
+    },
+    {
+      "heading": "Types of Immunotherapy",
+      "content": "There are several types of immunotherapy used to treat cancer:\n\n• Checkpoint Inhibitors: These drugs help your immune system respond more strongly to cancer. They work by releasing 'brakes' on your immune system.\n\n• CAR T-Cell Therapy: This treatment modifies your own immune cells to better recognize and attack cancer cells.\n\n• Cancer Vaccines: Unlike vaccines that prevent disease, cancer vaccines help your immune system attack existing cancer cells.\n\n• Monoclonal Antibodies: These laboratory-made proteins can mark cancer cells so your immune system can find and destroy them.",
+      "icon": "treatment"
+    },
+    {
+      "heading": "What to Expect During Treatment",
+      "content": "Immunotherapy is usually given through an IV infusion at a cancer center or hospital. Treatment schedules vary:\n\n• Infusions typically take 30 minutes to several hours\n• You may receive treatment every 2-6 weeks depending on the specific medication\n• You'll be monitored during and after each infusion\n• Blood tests will be done regularly to check your response and watch for side effects",
+      "icon": "schedule"
+    },
+    {
+      "heading": "Possible Side Effects",
+      "content": "Immunotherapy side effects can differ from chemotherapy side effects. Common side effects include:\n\n• Fatigue and weakness\n• Skin reactions (rash, itching)\n• Diarrhea or changes in bowel habits\n• Flu-like symptoms (fever, chills, muscle aches)\n\nMore serious side effects can occur when the immune system attacks healthy organs. These are called immune-related adverse events and can affect:\n\n• Lungs (pneumonitis)\n• Colon (colitis)\n• Liver (hepatitis)\n• Endocrine glands (thyroid, pituitary)\n\nMost side effects can be managed effectively when caught early. Contact your healthcare team immediately if you experience unusual symptoms.",
+      "icon": "alert"
+    },
+    {
+      "heading": "When to Call Your Healthcare Team",
+      "content": "Contact your healthcare provider immediately if you experience:\n\n• Severe diarrhea or abdominal pain\n• Shortness of breath or persistent cough\n• Unusual fatigue or weakness\n• Skin rash covering large areas\n• Vision changes\n• Severe headaches\n• Numbness or tingling in hands or feet\n• Yellowing of skin or eyes\n• Unusual bleeding or bruising\n\nDon't wait to report symptoms. Early detection of side effects leads to better outcomes.",
+      "icon": "phone"
+    },
+    {
+      "heading": "Managing Daily Life",
+      "content": "During immunotherapy treatment:\n\n• Maintain good nutrition and stay hydrated\n• Get adequate rest but remain as active as tolerated\n• Avoid people who are sick, as your immune system may not work normally\n• Keep all appointments for treatment and monitoring\n• Take prescribed medications as directed\n• Keep a symptom diary to share with your healthcare team\n• Ask for help from family and friends when needed",
+      "icon": "lifestyle"
+    }
+  ],
+  "downloadableMaterials": [
+    {
+      "title": "Immunotherapy Symptom Tracker",
+      "description": "Daily log to track symptoms and communicate with your healthcare team",
+      "format": "PDF",
+      "size": "2.1 MB"
+    },
+    {
+      "title": "Questions to Ask Your Doctor",
+      "description": "Comprehensive list of questions about immunotherapy treatment",
+      "format": "PDF",
+      "size": "850 KB"
+    },
+    {
+      "title": "Side Effects Management Guide",
+      "description": "Detailed information about managing common immunotherapy side effects",
+      "format": "PDF",
+      "size": "3.2 MB"
+    }
+  ],
+  "relatedResources": [
+    "Understanding Your Diagnosis",
+    "Nutrition During Cancer Treatment",
+    "Managing Treatment Side Effects",
+    "Support Resources for Patients and Families"
+  ],
+  "tags": ["Immunotherapy", "Patient Education", "Side Effects", "Treatment Guide", "Oncology"]
+}

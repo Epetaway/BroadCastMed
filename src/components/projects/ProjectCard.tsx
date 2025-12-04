@@ -1,17 +1,14 @@
-"use client";
-
 import { Project } from '@/types';
-import { useViewMode } from '@/context/ViewModeContext';
 import Link from 'next/link';
-import { ArrowUpRight, Code, Heart } from 'lucide-react';
+import { ArrowUpRight, Heart } from 'lucide-react';
 
 interface ProjectCardProps {
   project: Project;
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const { viewMode } = useViewMode();
-  const currentView = viewMode === 'developer' ? project.developerView : project.portfolioView;
+  // Use portfolio view for Dana-Farber transformation
+  const currentView = project.portfolioView;
 
   return (
     <div className="group relative bg-card border rounded-lg p-6 hover:shadow-lg transition-all duration-300">
@@ -34,25 +31,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <ArrowUpRight className="w-5 h-5 text-muted-foreground hover:text-healthcare-primary" />
         </Link>
       </div>
-      
+
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2 group-hover:text-healthcare-primary transition-colors">
           {project.title}
         </h3>
-        <p className="text-sm text-muted-foreground mb-3">
-          {project.role}
-        </p>
-        <p className="text-muted-foreground text-sm leading-relaxed">
-          {currentView.summary}
-        </p>
+        <p className="text-sm text-muted-foreground mb-3">{project.role}</p>
+        <p className="text-muted-foreground text-sm leading-relaxed">{currentView.summary}</p>
       </div>
-      
+
       <div className="flex flex-wrap gap-2 mb-4">
         {project.tech.slice(0, 4).map((tech) => (
-          <span
-            key={tech}
-            className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded"
-          >
+          <span key={tech} className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded">
             {tech}
           </span>
         ))}
@@ -62,14 +52,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </span>
         )}
       </div>
-      
-      {viewMode === 'developer' && (
-        <div className="flex items-center text-xs text-muted-foreground">
-          <Code className="w-3 h-3 mr-1" />
-          Technical Implementation Details
-        </div>
-      )}
-      
+
       <Link
         href={`/projects/${project.slug}`}
         className="absolute inset-0 z-10"

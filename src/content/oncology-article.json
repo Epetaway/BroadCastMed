@@ -1,0 +1,92 @@
+{
+  "id": "article-001",
+  "type": "article",
+  "title": "Advances in Targeted Therapy for Non-Small Cell Lung Cancer",
+  "authors": [
+    {
+      "name": "Dr. Sarah Mitchell",
+      "credentials": "MD, PhD",
+      "affiliation": "Department of Oncology"
+    },
+    {
+      "name": "Dr. James Chen",
+      "credentials": "MD",
+      "affiliation": "Thoracic Oncology Center"
+    }
+  ],
+  "publishDate": "2024-11-15",
+  "lastUpdated": "2024-11-20",
+  "specialty": "Thoracic Oncology",
+  "contentType": "Clinical Update",
+  "readTime": "8 min",
+  "abstract": "Recent advancements in targeted therapy have significantly improved outcomes for patients with non-small cell lung cancer (NSCLC). This article reviews the latest developments in EGFR, ALK, and ROS1 inhibitor therapies, discusses emerging biomarkers, and provides practical guidance for treatment selection in clinical practice.",
+  "keyTakeaways": [
+    "Next-generation EGFR inhibitors show improved CNS penetration and activity against T790M mutations",
+    "Combination strategies with immunotherapy are being explored in select patient populations",
+    "Comprehensive molecular profiling is essential for optimal treatment selection",
+    "Resistance mechanisms are better understood, enabling sequential therapy planning"
+  ],
+  "bodySections": [
+    {
+      "heading": "Introduction",
+      "content": "Non-small cell lung cancer (NSCLC) accounts for approximately 85% of all lung cancer cases. The landscape of NSCLC treatment has been revolutionized by the identification of actionable molecular alterations and the development of targeted therapies. This clinical update focuses on recent advances in targeted therapy for NSCLC patients with specific molecular drivers.",
+      "subsections": []
+    },
+    {
+      "heading": "EGFR-Targeted Therapy",
+      "content": "Epidermal growth factor receptor (EGFR) mutations are present in approximately 15-20% of NSCLC cases in Western populations and up to 50% in Asian populations. The development of EGFR tyrosine kinase inhibitors (TKIs) has significantly improved outcomes for these patients.",
+      "subsections": [
+        {
+          "subheading": "First and Second-Generation TKIs",
+          "content": "First-generation EGFR TKIs (gefitinib, erlotinib) and second-generation TKIs (afatinib, dacomitinib) have demonstrated superior progression-free survival compared to chemotherapy in patients with EGFR-mutant NSCLC. However, acquired resistance through T790M mutations remains a challenge."
+        },
+        {
+          "subheading": "Third-Generation TKIs",
+          "content": "Osimertinib, a third-generation EGFR TKI, has shown remarkable activity against both sensitizing EGFR mutations and the T790M resistance mutation. The FLAURA trial demonstrated superior efficacy of osimertinib over first-generation TKIs in the first-line setting, with improved central nervous system (CNS) penetration."
+        }
+      ]
+    },
+    {
+      "heading": "ALK-Rearranged NSCLC",
+      "content": "Anaplastic lymphoma kinase (ALK) rearrangements occur in approximately 3-5% of NSCLC cases. Multiple generations of ALK inhibitors are now available, each with distinct potency and resistance profiles.",
+      "subsections": [
+        {
+          "subheading": "Treatment Sequencing",
+          "content": "Current evidence supports the use of next-generation ALK inhibitors (alectinib, brigatinib, lorlatinib) in the first-line setting due to improved CNS activity and superior progression-free survival compared to crizotinib. Understanding resistance mechanisms is crucial for optimal treatment sequencing."
+        }
+      ]
+    },
+    {
+      "heading": "Emerging Molecular Targets",
+      "content": "Beyond EGFR and ALK, several other molecular alterations have emerged as actionable targets in NSCLC, including ROS1 rearrangements, BRAF mutations, MET exon 14 skipping mutations, RET fusions, and NTRK fusions. Specific targeted therapies are available or in development for each of these alterations.",
+      "subsections": []
+    },
+    {
+      "heading": "Clinical Implementation",
+      "content": "Successful implementation of precision medicine in NSCLC requires comprehensive molecular profiling of all advanced NSCLC patients, regardless of clinical characteristics. Next-generation sequencing panels should include all actionable alterations to guide treatment selection.",
+      "subsections": [
+        {
+          "subheading": "Testing Recommendations",
+          "content": "Molecular testing should be performed at diagnosis using tumor tissue or, when tissue is insufficient, using liquid biopsy approaches. Testing should include DNA-based alterations as well as RNA-based fusions to capture all actionable targets."
+        },
+        {
+          "subheading": "Resistance Management",
+          "content": "At progression on targeted therapy, repeat molecular profiling (tissue or liquid biopsy) is recommended to identify mechanisms of resistance and guide subsequent treatment decisions. Understanding resistance mechanisms enables rational selection of next-line therapies."
+        }
+      ]
+    }
+  ],
+  "references": [
+    "Soria JC, et al. Osimertinib in Untreated EGFR-Mutated Advanced Non-Small-Cell Lung Cancer. N Engl J Med. 2018;378(2):113-125.",
+    "Peters S, et al. Alectinib versus Crizotinib in Untreated ALK-Positive Non-Small-Cell Lung Cancer. N Engl J Med. 2017;377(9):829-838.",
+    "Ramalingam SS, et al. Overall Survival with Osimertinib in Untreated, EGFR-Mutated Advanced NSCLC. N Engl J Med. 2020;382(1):41-50.",
+    "Camidge DR, et al. Brigatinib versus Crizotinib in ALK-Positive Non-Small-Cell Lung Cancer. N Engl J Med. 2018;379(21):2027-2039."
+  ],
+  "tags": ["NSCLC", "Targeted Therapy", "EGFR", "ALK", "Precision Medicine", "Molecular Testing"],
+  "intendedAudience": [
+    "Medical Oncologists",
+    "Thoracic Surgeons",
+    "Pulmonologists",
+    "Oncology Fellows"
+  ]
+}

@@ -3,20 +3,21 @@ import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-muted/30 border-t">
+    <footer className="bg-muted/30 border-t" role="contentinfo">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="font-semibold text-lg mb-4">Earl Hickson</h3>
             <p className="text-muted-foreground mb-4">
-              Front-End Developer specializing in healthcare CMS platforms, responsive email campaigns, and accessible user interfaces.
+              Front-End Developer specializing in healthcare CMS platforms, responsive email
+              campaigns, and accessible user interfaces.
             </p>
             <div className="flex items-center text-muted-foreground">
-              <MapPin className="w-4 h-4 mr-2" />
+              <MapPin className="w-4 h-4 mr-2" aria-hidden="true" />
               {contactInfo.location}
             </div>
           </div>
-          
+
           <div>
             <h4 className="font-medium mb-4">Specialties</h4>
             <ul className="text-sm text-muted-foreground space-y-2">
@@ -26,39 +27,39 @@ export function Footer() {
               <li>Clinical Workflow Design</li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-medium mb-4">Connect</h4>
             <div className="flex space-x-4">
               <a
                 href={`mailto:${contactInfo.email}`}
-                className="text-muted-foreground hover:text-healthcare-primary transition-colors"
-                aria-label="Email"
+                className="text-muted-foreground hover:text-healthcare-primary transition-colors focus:outline-none focus:ring-2 focus:ring-healthcare-primary rounded"
+                aria-label="Send email to Earl Hickson"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5" aria-hidden="true" />
               </a>
               <a
                 href={contactInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-healthcare-primary transition-colors"
-                aria-label="LinkedIn"
+                className="text-muted-foreground hover:text-healthcare-primary transition-colors focus:outline-none focus:ring-2 focus:ring-healthcare-primary rounded"
+                aria-label="Visit Earl Hickson's LinkedIn profile"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" aria-hidden="true" />
               </a>
               <a
                 href={contactInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-healthcare-primary transition-colors"
-                aria-label="GitHub"
+                className="text-muted-foreground hover:text-healthcare-primary transition-colors focus:outline-none focus:ring-2 focus:ring-healthcare-primary rounded"
+                aria-label="Visit Earl Hickson's GitHub profile"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
           </div>
         </div>
-        
+
         <div className="border-t mt-8 pt-6 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Earl Hickson. All rights reserved.</p>
         </div>

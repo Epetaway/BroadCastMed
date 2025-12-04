@@ -1,0 +1,11 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  <g transform="translate(200,130)">
+    <circle cx="-30" cy="-20" r="18" fill="#e02424" opacity="0.6"/>
+    <circle cx="30" cy="-10" r="18" fill="#e02424" opacity="0.6"/>
+    <circle cx="0" cy="20" r="18" fill="#e02424" opacity="0.6"/>
+    <circle cx="-40" cy="30" r="15" fill="#e02424" opacity="0.5"/>
+    <circle cx="40" cy="25" r="15" fill="#e02424" opacity="0.5"/>
+  </g>
+  <text x="200" y="260" font-family="Arial" font-size="16" fill="#495057" text-anchor="middle">Hematologic Malignancies</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f8fafc"/>
+  <text x="400" y="50" font-family="Arial" font-size="28" fill="#1e293b" text-anchor="middle" font-weight="bold">Clinical Content Platform</text>
+  <rect x="50" y="80" width="700" height="100" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <text x="70" y="110" font-family="Arial" font-size="18" fill="#4a7ba7" font-weight="bold">Treatment Guidelines</text>
+  <text x="70" y="140" font-family="Arial" font-size="14" fill="#64748b">CMS-driven templates for oncology content</text>
+  <rect x="50" y="200" width="700" height="100" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <text x="70" y="230" font-family="Arial" font-size="18" fill="#4a7ba7" font-weight="bold">Physician Resources</text>
+  <text x="70" y="260" font-family="Arial" font-size="14" fill="#64748b">Responsive UI components for clinical workflows</text>
+  <rect x="50" y="320" width="700" height="100" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <text x="70" y="350" font-family="Arial" font-size="18" fill="#4a7ba7" font-weight="bold">Content Management</text>
+  <text x="70" y="380" font-family="Arial" font-size="14" fill="#64748b">Reusable component architecture</text>
+</svg>

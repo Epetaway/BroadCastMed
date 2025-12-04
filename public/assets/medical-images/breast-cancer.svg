@@ -1,0 +1,8 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  <g transform="translate(200,130)">
+    <circle cx="0" cy="0" r="50" fill="#e02424" opacity="0.2"/>
+    <path d="M -30,-20 Q -40,0 -30,20 Q -20,30 0,40 Q 20,30 30,20 Q 40,0 30,-20 Q 20,-30 0,-20 Q -20,-30 -30,-20 Z" fill="#e02424" opacity="0.3"/>
+  </g>
+  <text x="200" y="260" font-family="Arial" font-size="16" fill="#495057" text-anchor="middle">Breast Cancer Screening</text>
+</svg>

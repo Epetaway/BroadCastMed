@@ -1,0 +1,14 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f8fafc"/>
+  <text x="400" y="50" font-family="Arial" font-size="28" fill="#1e293b" text-anchor="middle" font-weight="bold">Email Campaign System</text>
+  <rect x="50" y="80" width="220" height="400" fill="white" stroke="#4a7ba7" stroke-width="3" rx="8"/>
+  <rect x="60" y="90" width="200" height="40" fill="#5eaf7e" rx="4"/>
+  <text x="160" y="115" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Desktop View</text>
+  <rect x="290" y="80" width="220" height="400" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <rect x="300" y="90" width="200" height="40" fill="#e2e8f0" rx="4"/>
+  <text x="400" y="115" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">Tablet View</text>
+  <rect x="530" y="80" width="220" height="400" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <rect x="540" y="90" width="200" height="40" fill="#e2e8f0" rx="4"/>
+  <text x="640" y="115" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">Mobile View</text>
+  <text x="400" y="520" font-family="Arial" font-size="16" fill="#64748b" text-anchor="middle">Cross-client compatible HTML emails</text>
+</svg>

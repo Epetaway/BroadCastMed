@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
+  <!-- Medical article placeholder -->
+  <defs>
+    <linearGradient id="articleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e6f2ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="600" fill="url(#articleGrad)"/>
+  <g opacity="0.3">
+    <!-- Abstract medical grid -->
+    <line x1="100" y1="100" x2="900" y2="100" stroke="#0066cc" stroke-width="2"/>
+    <line x1="100" y1="200" x2="900" y2="200" stroke="#0066cc" stroke-width="2"/>
+    <line x1="100" y1="300" x2="900" y2="300" stroke="#0066cc" stroke-width="2"/>
+    <line x1="100" y1="400" x2="900" y2="400" stroke="#0066cc" stroke-width="2"/>
+    <line x1="100" y1="500" x2="900" y2="500" stroke="#0066cc" stroke-width="2"/>
+  </g>
+  <text x="500" y="310" font-family="system-ui, sans-serif" font-size="36" fill="#0066cc" text-anchor="middle" font-weight="400">
+    Article Placeholder
+  </text>
+</svg>

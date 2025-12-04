@@ -1,8 +1,17 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
-import { useViewMode } from '@/context/ViewModeContext';
-import { ArrowLeft, ExternalLink, Github, Monitor, Tablet, Smartphone, Code, ChevronDown, ChevronUp } from 'lucide-react';
+import {
+  ArrowLeft,
+  ExternalLink,
+  Github,
+  Monitor,
+  Tablet,
+  Smartphone,
+  Code,
+  ChevronDown,
+  ChevronUp,
+} from 'lucide-react';
 import Link from 'next/link';
 import { Project } from '@/types';
 
@@ -11,11 +20,11 @@ interface ProjectDetailClientProps {
 }
 
 export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
-  const { viewMode } = useViewMode();
+  // Default to portfolio view for now (Dana-Farber transformation in progress)
   const [activeDevice, setActiveDevice] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
   const [expandedSnippet, setExpandedSnippet] = useState<number | null>(null);
 
-  const currentView = viewMode === 'developer' ? project.developerView : project.portfolioView;
+  const currentView = project.portfolioView;
 
   const toggleSnippet = (index: number) => {
     setExpandedSnippet(expandedSnippet === index ? null : index);
@@ -45,7 +54,7 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <span className="text-muted-foreground">•</span>
               <span className="text-muted-foreground">{project.role}</span>
             </div>
-            
+
             <h1 className="text-4xl font-bold tracking-tight">{project.title}</h1>
             <h2 className="text-xl text-healthcare-primary font-medium">{currentView.headline}</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">{currentView.summary}</p>
@@ -53,7 +62,9 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
 
           {/* Technology Stack */}
           <div className="space-y-3">
-            <h3 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground">Technologies Used</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground">
+              Technologies Used
+            </h3>
             <div className="flex flex-wrap gap-2">
               {project.tech.map((tech) => (
                 <span
@@ -101,7 +112,9 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <button
                 onClick={() => setActiveDevice('desktop')}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-colors ${
-                  activeDevice === 'desktop' ? 'bg-healthcare-primary text-white' : 'bg-muted hover:bg-muted/80'
+                  activeDevice === 'desktop'
+                    ? 'bg-healthcare-primary text-white'
+                    : 'bg-muted hover:bg-muted/80'
                 }`}
               >
                 <Monitor className="w-4 h-4" />
@@ -110,7 +123,9 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <button
                 onClick={() => setActiveDevice('tablet')}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-colors ${
-                  activeDevice === 'tablet' ? 'bg-healthcare-primary text-white' : 'bg-muted hover:bg-muted/80'
+                  activeDevice === 'tablet'
+                    ? 'bg-healthcare-primary text-white'
+                    : 'bg-muted hover:bg-muted/80'
                 }`}
               >
                 <Tablet className="w-4 h-4" />
@@ -119,7 +134,9 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <button
                 onClick={() => setActiveDevice('mobile')}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-colors ${
-                  activeDevice === 'mobile' ? 'bg-healthcare-primary text-white' : 'bg-muted hover:bg-muted/80'
+                  activeDevice === 'mobile'
+                    ? 'bg-healthcare-primary text-white'
+                    : 'bg-muted hover:bg-muted/80'
                 }`}
               >
                 <Smartphone className="w-4 h-4" />
@@ -129,11 +146,15 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
             <div className="bg-white rounded-lg p-4 border">
               <div className="text-center text-muted-foreground">
                 <p className="mb-2">Preview for {activeDevice} view</p>
-                <div className={`mx-auto bg-healthcare-primary/10 rounded ${
-                  activeDevice === 'desktop' ? 'w-full h-64' : 
-                  activeDevice === 'tablet' ? 'w-3/4 h-56' : 
-                  'w-1/2 h-48'
-                }`}>
+                <div
+                  className={`mx-auto bg-healthcare-primary/10 rounded ${
+                    activeDevice === 'desktop'
+                      ? 'w-full h-64'
+                      : activeDevice === 'tablet'
+                        ? 'w-3/4 h-56'
+                        : 'w-1/2 h-48'
+                  }`}
+                >
                   <div className="flex items-center justify-center h-full">
                     <span className="text-healthcare-primary font-medium">
                       {activeDevice.charAt(0).toUpperCase() + activeDevice.slice(1)} Layout
@@ -158,17 +179,17 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
           </div>
         </div>
 
-        {/* Technical Implementation (Developer View Only) */}
-        {viewMode === 'developer' && project.technicalDetails && (
+        {/* Technical Implementation - Always hidden during Dana-Farber transformation */}
+        {false && project.technicalDetails && (
           <div className="space-y-8 mb-12">
             <h2 className="text-2xl font-bold">Technical Implementation</h2>
-            
+
             {/* Challenges & Solutions */}
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Challenges</h3>
                 <ul className="space-y-2">
-                  {project.technicalDetails.challenges.map((challenge, index) => (
+                  {project.technicalDetails?.challenges.map((challenge, index) => (
                     <li key={index} className="text-muted-foreground text-sm leading-relaxed">
                       • {challenge}
                     </li>
@@ -178,7 +199,7 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Solutions</h3>
                 <ul className="space-y-2">
-                  {project.technicalDetails.solutions.map((solution, index) => (
+                  {project.technicalDetails?.solutions.map((solution, index) => (
                     <li key={index} className="text-muted-foreground text-sm leading-relaxed">
                       • {solution}
                     </li>
@@ -188,10 +209,10 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
             </div>
 
             {/* Code Snippets */}
-            {project.technicalDetails.codeSnippets && (
+            {project.technicalDetails?.codeSnippets && (
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Code Examples</h3>
-                {project.technicalDetails.codeSnippets.map((snippet, index) => (
+                {project.technicalDetails?.codeSnippets?.map((snippet, index) => (
                   <div key={index} className="border rounded-lg overflow-hidden">
                     <button
                       onClick={() => toggleSnippet(index)}
@@ -210,13 +231,11 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
                         <ChevronDown className="w-4 h-4" />
                       )}
                     </button>
-                    
+
                     {expandedSnippet === index && (
                       <div className="p-4 bg-white border-t">
                         <pre className="text-sm overflow-x-auto">
-                          <code className={`language-${snippet.language}`}>
-                            {snippet.code}
-                          </code>
+                          <code className={`language-${snippet.language}`}>{snippet.code}</code>
                         </pre>
                       </div>
                     )}
@@ -272,7 +291,7 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
                   </ul>
                 </div>
               )}
-              
+
               {project.outcomes.feedback && (
                 <div className="space-y-3">
                   <h3 className="text-lg font-semibold">Stakeholder Feedback</h3>
