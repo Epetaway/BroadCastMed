@@ -8,7 +8,7 @@ import { ResourceGrid } from '@/components/content/ResourceGrid';
 import { getSymposiumBySlug, getAllSymposia } from '@/content/symposia';
 import { Check, Play } from 'lucide-react';
 import { ResourceType } from '@/types/content';
-import { getSymposiumImage } from '@/lib/images';
+import { getSymposiumGradient, generateSeed } from '@/lib/images';
 
 // Generate static params for all symposia
 export function generateStaticParams() {
@@ -50,18 +50,14 @@ export default function SymposiumPage({ params }: SymposiumPageProps) {
     .filter((s) => s.specialty === symposium.specialty && s.slug !== symposium.slug)
     .slice(0, 3);
 
+  // Generate gradient for this symposium
+  const gradient = getSymposiumGradient(generateSeed(symposium.slug));
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-df-blue-dark to-df-blue text-white">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `url('${getSymposiumImage(symposium.slug)}')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+      <div className="relative bg-gradient-to-r from-df-blue-dark to-df-blue text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-20" style={{ background: gradient }} />
         <div className="relative">
           <Shell>
             <div className="py-16 md:py-24">

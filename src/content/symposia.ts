@@ -3,7 +3,6 @@
  */
 
 import { SymposiumDetail, Specialty, ResourceType } from '@/types/content';
-import { getSymposiumImage } from '@/lib/images';
 
 export const symposia: SymposiumDetail[] = [
   {
@@ -16,7 +15,6 @@ export const symposia: SymposiumDetail[] = [
       'Understanding subtle GI symptoms and supportive care strategies for patients with colorectal cancer.',
     specialty: Specialty.Colorectal,
     date: '2025-01-15',
-    image: getSymposiumImage('early-symptoms-crc'),
     cmeCredits: '1.0',
     durationMinutes: 60,
     presenters: ['Dr. Sarah Johnson, MD', 'Dr. Michael Chen, MD'],
@@ -56,7 +54,6 @@ export const symposia: SymposiumDetail[] = [
       'Preview of key clinical trials and research presentations from the upcoming ASCO Annual Meeting across multiple oncology subspecialties.',
     specialty: Specialty.General,
     date: '2025-02-20',
-    image: getSymposiumImage('asco-preview-2025'),
     cmeCredits: '1.5',
     durationMinutes: 90,
     presenters: ['Dr. Emily Rodriguez, MD, PhD', 'Dr. James Patterson, MD', 'Dr. Lisa Wang, MD'],

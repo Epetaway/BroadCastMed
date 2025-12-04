@@ -27,7 +27,7 @@ export interface BaseResource {
   summary: string;
   specialty: Specialty;
   date: string; // ISO date string
-  image: string; // relative path to placeholder image
+  image?: string; // Optional - fallback to CSS gradient if not provided
   tags?: string[];
   relatedContent?: string[]; // slugs of related content
 }

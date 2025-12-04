@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Clock } from 'lucide-react';
 import { BaseResource } from '@/types/content';
-import { getCardImage, generateSeed } from '@/lib/images';
+import { getCardGradient, generateSeed } from '@/lib/images';
 
 interface ResourceCardProps {
   resource: BaseResource;
@@ -12,14 +11,18 @@ interface ResourceCardProps {
 }
 
 export function ResourceCard({ resource, href }: ResourceCardProps) {
-  // Generate fallback image if none provided, using resource slug for consistency
-  const imageSrc = resource.image || getCardImage(generateSeed(resource.slug));
+  // Generate gradient background using resource slug for consistency
+  const gradient = getCardGradient(generateSeed(resource.slug));
 
   return (
     <Link href={href}>
       <Card className="h-full transition-shadow hover:shadow-md">
-        <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
-          <Image src={imageSrc} alt={resource.title} fill className="object-cover" />
+        <div
+          className="relative h-48 w-full overflow-hidden rounded-t-lg"
+          style={{ background: gradient }}
+        >
+          {/* Gradient placeholder with subtle pattern */}
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.8),rgba(255,255,255,0))]" />
         </div>
 
         <CardHeader>

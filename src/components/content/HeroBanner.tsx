@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 
@@ -6,7 +5,7 @@ interface HeroBannerProps {
   title: string;
   subtitle: string;
   imageSrc?: string;
-  image?: string; // Alias for imageSrc
+  image?: string; // Alias for imageSrc (kept for compatibility)
   primaryCta?: {
     text: string;
     href: string;
@@ -17,22 +16,14 @@ interface HeroBannerProps {
   };
 }
 
-export function HeroBanner({
-  title,
-  subtitle,
-  imageSrc,
-  image,
-  primaryCta,
-  secondaryCta,
-}: HeroBannerProps) {
-  const imageUrl = imageSrc || image;
+export function HeroBanner({ title, subtitle, primaryCta, secondaryCta }: HeroBannerProps) {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-df-blue to-df-blue-dark">
-      {imageUrl && (
-        <div className="absolute inset-0 opacity-10">
-          <Image src={imageUrl} alt="" fill className="object-cover" priority />
-        </div>
-      )}
+      {/* Decorative gradient overlay with subtle pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,193,7,0.3),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,179,179,0.2),transparent_50%)]" />
+      </div>
 
       <div className="container relative mx-auto px-4 py-20 md:py-32">
         <div className="max-w-3xl">

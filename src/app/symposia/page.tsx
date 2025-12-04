@@ -2,12 +2,10 @@
 
 import { useState } from 'react';
 import { Shell } from '@/components/layout/Shell';
-import { SectionHeader } from '@/components/ui/SectionHeader';
 import { ResourceFilters } from '@/components/content/ResourceFilters';
 import { ResourceGrid } from '@/components/content/ResourceGrid';
 import { getAllSymposia } from '@/content/symposia';
 import { Specialty } from '@/types/content';
-import { getHeroImage } from '@/lib/images';
 
 export default function SymposiaPage() {
   const [activeSpecialty, setActiveSpecialty] = useState<Specialty | 'All'>('All');
@@ -21,15 +19,12 @@ export default function SymposiaPage() {
   return (
     <>
       {/* Page Header */}
-      <div className="relative bg-gradient-to-r from-df-blue to-df-blue-dark text-white">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `url('${getHeroImage('symposia')}')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+      <div className="relative bg-gradient-to-r from-df-blue to-df-blue-dark text-white overflow-hidden">
+        {/* Decorative gradient overlay */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(255,193,7,0.4),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_70%,rgba(0,179,179,0.3),transparent_60%)]" />
+        </div>
         <div className="relative">
           <Shell>
             <div className="py-16">

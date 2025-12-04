@@ -3,9 +3,7 @@ import { HeroBanner } from '@/components/content/HeroBanner';
 import { Shell } from '@/components/layout/Shell';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { ResourceGrid } from '@/components/content/ResourceGrid';
-import { ResourceCard } from '@/components/content/ResourceCard';
 import { getAllSymposia } from '@/content/symposia';
-import { getHeroImage } from '@/lib/images';
 
 export const metadata: Metadata = {
   title: 'Dana-Farber Provider Education Platform',
@@ -21,7 +19,6 @@ export default function HomePage() {
       <HeroBanner
         title="Dana-Farber Provider Education Platform"
         subtitle="Advanced oncology education and clinical resources for healthcare professionals"
-        imageSrc={getHeroImage('danafarber-hero')}
         primaryCta={{
           text: 'Explore Provider Resources',
           href: '/provider-resources',

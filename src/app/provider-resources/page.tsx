@@ -3,7 +3,6 @@ import { ResourceGrid } from '@/components/content/ResourceGrid';
 import { getAllSymposia } from '@/content/symposia';
 import { ArrowRight, UserPlus, Search, Phone, FileText } from 'lucide-react';
 import Link from 'next/link';
-import { getHeroImage } from '@/lib/images';
 
 export const metadata = {
   title: 'Provider Resources - Dana-Farber Provider Education',
@@ -19,15 +18,12 @@ export default function ProviderResourcesPage() {
   return (
     <>
       {/* Hero Banner */}
-      <div className="relative bg-gradient-to-r from-df-blue-dark to-df-blue text-white">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `url('${getHeroImage('provider-resources')}')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+      <div className="relative bg-gradient-to-r from-df-blue-dark to-df-blue text-white overflow-hidden">
+        {/* Decorative gradient overlay */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,193,7,0.3),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,179,179,0.2),transparent_50%)]" />
+        </div>
         <div className="relative">
           <Shell>
             <div className="py-16 md:py-24">

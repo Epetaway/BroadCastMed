@@ -1,5 +1,4 @@
 import { ClinicalGuidanceDetail, Specialty, ResourceType } from '@/types/content';
-import { getResearchImage } from '@/lib/images';
 
 export const clinicalGuidance: ClinicalGuidanceDetail[] = [
   {
@@ -11,7 +10,6 @@ export const clinicalGuidance: ClinicalGuidanceDetail[] = [
       'Practical guidance for identifying and evaluating concerning GI symptoms in patients under age 50, addressing the rise in early-onset colorectal cancer.',
     specialty: Specialty.Colorectal,
     date: '2024-10-20',
-    image: getResearchImage('early-onset-crc-recognition'),
     intendedAudience: [
       'Medical Oncologists',
       'Gastroenterologists',
@@ -81,7 +79,6 @@ export const clinicalGuidance: ClinicalGuidanceDetail[] = [
       'Evidence-based strategies for recognizing, grading, and treating immune-related adverse events in patients receiving PD-1, PD-L1, and CTLA-4 inhibitors.',
     specialty: Specialty.General,
     date: '2024-09-10',
-    image: getResearchImage('immunotherapy-toxicity-management'),
     intendedAudience: [
       'Medical Oncologists',
       'Hematology-Oncology Fellows',

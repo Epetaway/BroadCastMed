@@ -1,9 +1,9 @@
 /**
- * Image utility for generating placeholder images using Unsplash
- * Provides medical-themed images for the Dana-Farber Provider Education Platform
+ * Gradient utility for generating placeholder gradients
+ * Provides medical-themed gradients for the Dana-Farber Provider Education Platform
  */
 
-export type ImageCategory =
+export type GradientCategory =
   | 'medical-hero'
   | 'medical-card'
   | 'medical-article'
@@ -11,117 +11,106 @@ export type ImageCategory =
   | 'medical-research'
   | 'medical-clinical';
 
-interface ImageOptions {
-  width?: number;
-  height?: number;
-  category?: ImageCategory;
-  seed?: string;
-}
-
 /**
- * Generate an Unsplash image URL for medical/healthcare imagery
- * Uses Unsplash's Source API with medical-related search terms
+ * Generate a CSS gradient for medical/healthcare imagery
+ * Uses Dana-Farber blue/gold palette with varied angles and opacity
  *
- * @param options - Image configuration options
- * @returns Unsplash image URL
+ * @param category - Gradient category
+ * @param seed - Optional seed for variation
+ * @returns CSS gradient string
  */
-export function getPlaceholderImage(options: ImageOptions = {}): string {
-  const { width = 800, height = 600, category = 'medical-card', seed } = options;
-
-  // Map categories to specific Unsplash search queries
-  const categoryQueries: Record<ImageCategory, string> = {
-    'medical-hero': 'medical,healthcare,hospital',
-    'medical-card': 'medical,doctor,healthcare',
-    'medical-article': 'medical,research,science',
-    'medical-symposium': 'conference,medical,presentation',
-    'medical-research': 'laboratory,medical,research',
-    'medical-clinical': 'clinic,healthcare,medical',
+export function getPlaceholderGradient(
+  category: GradientCategory = 'medical-card',
+  seed?: string
+): string {
+  // Dana-Farber color palette
+  const colors = {
+    blue: '#0066cc',
+    blueDark: '#003d7a',
+    blueLight: '#4d94e6',
+    gold: '#ffc107',
+    goldLight: '#ffd54f',
+    teal: '#00b3b3',
+    gray: '#6b7280',
   };
 
-  const query = categoryQueries[category];
+  // Map categories to specific gradient combinations
+  const gradients: Record<GradientCategory, string> = {
+    'medical-hero': `linear-gradient(135deg, ${colors.blue} 0%, ${colors.blueDark} 100%)`,
+    'medical-card': `linear-gradient(120deg, ${colors.blueLight} 0%, ${colors.blue} 100%)`,
+    'medical-article': `linear-gradient(45deg, ${colors.blue} 0%, ${colors.teal} 100%)`,
+    'medical-symposium': `linear-gradient(135deg, ${colors.blueDark} 0%, ${colors.gold} 100%)`,
+    'medical-research': `linear-gradient(90deg, ${colors.blue} 0%, ${colors.blueLight} 50%, ${colors.gold} 100%)`,
+    'medical-clinical': `linear-gradient(180deg, ${colors.blueLight} 0%, ${colors.blue} 100%)`,
+  };
 
-  // Use Unsplash Source API with specific search terms
-  // Format: https://source.unsplash.com/{width}x{height}/?{query}
-  let url = `https://source.unsplash.com/${width}x${height}/?${query}`;
-
-  // Add seed for consistent images (optional)
+  // Add variation based on seed if provided
   if (seed) {
-    url += `&sig=${seed}`;
+    const hash = generateHash(seed);
+    const angle = 45 + (hash % 180); // Random angle between 45-225 degrees
+    const variant = hash % 3;
+
+    if (variant === 0) {
+      return `linear-gradient(${angle}deg, ${colors.blue} 0%, ${colors.blueDark} 100%)`;
+    } else if (variant === 1) {
+      return `linear-gradient(${angle}deg, ${colors.blueLight} 0%, ${colors.teal} 100%)`;
+    } else {
+      return `linear-gradient(${angle}deg, ${colors.blueDark} 0%, ${colors.gold} 100%)`;
+    }
   }
 
-  return url;
+  return gradients[category];
 }
 
 /**
- * Get a hero banner image (1200x600)
+ * Get a hero banner gradient
  */
-export function getHeroImage(seed?: string): string {
-  return getPlaceholderImage({
-    width: 1200,
-    height: 600,
-    category: 'medical-hero',
-    seed,
-  });
+export function getHeroGradient(seed?: string): string {
+  return getPlaceholderGradient('medical-hero', seed);
 }
 
 /**
- * Get a resource card image (800x500)
+ * Get a resource card gradient
  */
-export function getCardImage(seed?: string): string {
-  return getPlaceholderImage({
-    width: 800,
-    height: 500,
-    category: 'medical-card',
-    seed,
-  });
+export function getCardGradient(seed?: string): string {
+  return getPlaceholderGradient('medical-card', seed);
 }
 
 /**
- * Get an article header image (1000x600)
+ * Get an article header gradient
  */
-export function getArticleImage(seed?: string): string {
-  return getPlaceholderImage({
-    width: 1000,
-    height: 600,
-    category: 'medical-article',
-    seed,
-  });
+export function getArticleGradient(seed?: string): string {
+  return getPlaceholderGradient('medical-article', seed);
 }
 
 /**
- * Get a symposium image (800x500)
+ * Get a symposium gradient
  */
-export function getSymposiumImage(seed?: string): string {
-  return getPlaceholderImage({
-    width: 800,
-    height: 500,
-    category: 'medical-symposium',
-    seed,
-  });
+export function getSymposiumGradient(seed?: string): string {
+  return getPlaceholderGradient('medical-symposium', seed);
 }
 
 /**
- * Get a research/clinical image (800x500)
+ * Get a research/clinical gradient
  */
-export function getResearchImage(seed?: string): string {
-  return getPlaceholderImage({
-    width: 800,
-    height: 500,
-    category: 'medical-research',
-    seed,
-  });
+export function getResearchGradient(seed?: string): string {
+  return getPlaceholderGradient('medical-research', seed);
 }
 
 /**
- * Generate a deterministic seed from a string (e.g., slug)
- * This ensures the same content always gets the same image
+ * Generate a deterministic hash from a string (e.g., slug)
+ * This ensures the same content always gets the same gradient
  */
 export function generateSeed(input: string): string {
+  return generateHash(input).toString();
+}
+
+function generateHash(input: string): number {
   let hash = 0;
   for (let i = 0; i < input.length; i++) {
     const char = input.charCodeAt(i);
     hash = (hash << 5) - hash + char;
     hash = hash & hash; // Convert to 32bit integer
   }
-  return Math.abs(hash).toString();
+  return Math.abs(hash);
 }

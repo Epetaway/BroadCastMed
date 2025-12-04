@@ -1,5 +1,4 @@
 import { ResearchDetail, Specialty, ResourceType } from '@/types/content';
-import { getResearchImage } from '@/lib/images';
 
 export const researchArticles: ResearchDetail[] = [
   {
@@ -11,7 +10,6 @@ export const researchArticles: ResearchDetail[] = [
       'A comprehensive digital resource providing patients and families with reliable, evidence-based cancer information across multiple specialties.',
     specialty: Specialty.General,
     date: '2024-12-01',
-    image: getResearchImage('cancer-factfinder-toolkit'),
     relatedContent: ['precision-hematology', 'breast-cancer-screening'],
     learningObjectives: [
       'Understand the scope and purpose of the Cancer FactFinder toolkit',
@@ -55,7 +53,6 @@ export const researchArticles: ResearchDetail[] = [
       'Landmark trial demonstrates significant survival benefit with dual checkpoint inhibitor therapy plus chemotherapy in first-line metastatic non-small cell lung cancer.',
     specialty: Specialty.General,
     date: '2024-11-15',
-    image: getResearchImage('immunotherapy-combination-trials'),
     relatedContent: ['asco-preview-2025'],
     learningObjectives: [
       'Review Phase III trial design and patient population',
